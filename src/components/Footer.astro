@@ -10,8 +10,6 @@ import {
 import { GiteLogoWrapper } from "@/components/GiteLogoWrapper";
 import { Small } from "@/components/Typography";
 import Image from "astro/components/Image.astro";
-
-const activePath = Astro.url.pathname;
 ---
 
 <footer class="bg-white w-full mt-6">
@@ -19,7 +17,7 @@ const activePath = Astro.url.pathname;
     class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-28 border-t border-green-800 pt-8"
   >
     <div class="ml-4 md:ml-0">
-      <GiteLogoWrapper currentPath={activePath} />
+      <GiteLogoWrapper />
       <div class="flex flex-row justify-start gap-2 mt-4">
         <Image
           src="/meuble-de-tourisme.webp"
@@ -50,7 +48,7 @@ const activePath = Astro.url.pathname;
     <CGLButton />
     <MentionLegalesButton />
     <Small className="whitespace-nowrap">
-      &copy; {new Date().getFullYear()} Gîte La Randonnée. Tous droits réservés.
+      &copy; {new Date().getFullYear()} Gîte La-Haut. Tous droits réservés.
     </Small>
   </div>
 </footer>

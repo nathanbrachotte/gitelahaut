@@ -1,4 +1,4 @@
-# Gîte La Randonnée Website
+# Gîte La-Haut Website
 
 A rental property website built with Astro, featuring dual rental system support.
 
@@ -6,15 +6,15 @@ A rental property website built with Astro, featuring dual rental system support
 
 This project has been enhanced to support two rental properties:
 
-- **La Randonnée** (original, purple theme) - `/`
-- **Là-Haut** (new, green theme) - `/la-haut/`
+- **La-Haut** (main, green theme) - `/`
+- **La Randonnée** (secondary, purple theme) - `/la-randonnee/`
 
 ### Implementation Details
 
 #### 1. URL Structure
 
-- Main rental "La Randonnée": Standard URLs (e.g., `/`, `/disponibilites`)
-- New rental "Là-Haut": Prefixed URLs (e.g., `/la-haut/`, `/la-haut/disponibilites`)
+- Main rental "La-Haut": Standard URLs (e.g., `/`, `/disponibilites`)
+- Secondary rental "La Randonnée": Prefixed URLs (e.g., `/la-randonnee/`, `/la-randonnee/disponibilites`)
 - Shared pages (like `/decouvrir-la-region`) remain the same for both rentals
 
 #### 5. Implementation Status

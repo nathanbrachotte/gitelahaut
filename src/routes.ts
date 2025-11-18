@@ -105,46 +105,24 @@ const generateUrl = <
  * If you want to override the baseUrl, you can specify it in the props.
  */
 export const ROUTES = {
-  // LAR = La Randonnée
-  LAR_ACCUEIL: {
+  ACCUEIL: {
     getPath: (props: RouteParams) => {
       return generateUrl("/", props);
     },
   },
-  // LAH = Là-Haut
-  LAH_ACCUEIL: {
-    getPath: (props: RouteParams) => {
-      return generateUrl("/la-haut/", props);
-    },
-  },
-  LAR_DISPO_TARIFS: {
+  DISPO_TARIFS: {
     getPath: (props: RouteParams) => {
       return generateUrl("/disponibilites", props);
     },
   },
-  LAH_DISPO_TARIFS: {
-    getPath: (props: RouteParams) => {
-      return generateUrl("/la-haut/disponibilites", props);
-    },
-  },
-  LAR_PLAN_DU_GITE: {
+  PLAN_DU_GITE: {
     getPath: (props: RouteParams) => {
       return generateUrl("/plan-du-gite", props);
     },
   },
-  LAH_PLAN_DU_GITE: {
-    getPath: (props: RouteParams) => {
-      return generateUrl("/la-haut/plan-du-gite", props);
-    },
-  },
-  LAR_ACTIVITES: {
+  ACTIVITES: {
     getPath: (props: RouteParams) => {
       return generateUrl("/decouvrir-la-region", props);
-    },
-  },
-  LAH_ACTIVITES: {
-    getPath: (props: RouteParams) => {
-      return generateUrl("/la-haut/decouvrir-la-region", props);
     },
   },
   CGL: {
@@ -215,38 +193,19 @@ export const getAbsoluteUrl = ({
   return url;
 };
 
-export type RentalType = "la-randonnee" | "la-haut";
-
-export function getHomePagePath(currentPath: string) {
-  // If path is undefined or empty, default to la-randonnee
-  if (!currentPath) {
-    return ROUTES.LAR_ACCUEIL.getPath({});
-  }
-
-  // Check if current path includes la-haut
-  const isLaHaut = currentPath.includes("la-haut");
-  return isLaHaut
-    ? ROUTES.LAH_ACCUEIL.getPath({})
-    : ROUTES.LAR_ACCUEIL.getPath({});
+// Simplified routing functions - always return La-Haut paths
+export function getHomePagePath(_currentPath?: string) {
+  return ROUTES.ACCUEIL.getPath({});
 }
 
-export function getDispoTarifsPath(currentPath: string) {
-  const isLaHaut = currentPath.includes("la-haut");
-  return isLaHaut
-    ? ROUTES.LAH_DISPO_TARIFS.getPath({})
-    : ROUTES.LAR_DISPO_TARIFS.getPath({});
+export function getDispoTarifsPath(_currentPath?: string) {
+  return ROUTES.DISPO_TARIFS.getPath({});
 }
 
-export function getPlanDuGitePath(currentPath: string) {
-  const isLaHaut = currentPath.includes("la-haut");
-  return isLaHaut
-    ? ROUTES.LAH_PLAN_DU_GITE.getPath({})
-    : ROUTES.LAR_PLAN_DU_GITE.getPath({});
+export function getPlanDuGitePath(_currentPath?: string) {
+  return ROUTES.PLAN_DU_GITE.getPath({});
 }
 
-export function getDecouvrirLaRegionPath(currentPath: string) {
-  const isLaHaut = currentPath.includes("la-haut");
-  return isLaHaut
-    ? ROUTES.LAH_ACTIVITES.getPath({})
-    : ROUTES.LAR_ACTIVITES.getPath({});
+export function getDecouvrirLaRegionPath(_currentPath?: string) {
+  return ROUTES.ACTIVITES.getPath({});
 }

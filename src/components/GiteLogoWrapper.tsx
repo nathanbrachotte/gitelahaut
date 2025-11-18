@@ -3,14 +3,10 @@ import { GiteLogo } from "@/components/logo";
 import { H2, Small } from "@/components/Typography";
 import { NAME, PHONE_NUMBER } from "@/data";
 import { PhoneIcon } from "./icons";
-import { getHomePagePath } from "@/routes";
+import { ROUTES } from "@/routes";
 
-interface GiteLogoWrapperProps {
-  currentPath: string;
-}
-
-export function GiteLogoWrapper({ currentPath }: GiteLogoWrapperProps) {
-  const homePagePath = getHomePagePath(currentPath);
+export function GiteLogoWrapper() {
+  const homePagePath = ROUTES.ACCUEIL.getPath({});
 
   return (
     <div className="flex flex-row items-end gap-2">

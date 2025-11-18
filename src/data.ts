@@ -1,20 +1,11 @@
-export const NAME = "Gîte La Randonnée";
-export const SHORT_NAME = "La Randonnée";
+export const NAME = "Gîte La-Haut";
+export const SHORT_NAME = "La-Haut";
 export const PHONE_NUMBER = "+33 6 51 47 97 43";
-export const WEBSITE_ADDRESS = "https://gitelarandonnee.fr";
+export const WEBSITE_ADDRESS = "https://gitelahaut.com";
 export const ADDRESS = "102 Grande Rue, 25300 Les Fourgs";
-export const EMAIL = "gite.larandonnee25@gmail.com";
+export const EMAIL = "gite.lahaut@gmail.com";
 
-export const GITE = {
-  la_randonnee: {
-    url: "/",
-    maxPersons: 14,
-  },
-  la_haut: {
-    url: "/la-haut",
-    maxPersons: 6,
-  },
-};
+export const MAX_PERSONS = 6;
 
 export const IMAGES = {
   EXTERIEUR_ETE: {
@@ -218,13 +209,13 @@ export const LINKS = {
       "https://www.bourgognefranchecomte.com/activites/en-hauteur/escalade-via-ferrata/",
   },
   FACEBOOK: {
-    url: "https://www.facebook.com/larandonnee.lesfourgs",
+    url: "https://www.facebook.com/gitelahaut.lesfourgs",
   },
   METABIEF_ADVENTURE: {
     url: "https://www.metabiefaventures.fr/",
   },
   OFFICE_TOURISME_GITE: {
-    url: "https://www.destination-haut-doubs.com/reservation/gite-de-la-randonnee.html",
+    url: "https://www.destination-haut-doubs.com/reservation/gite-la-haut.html",
   },
   EXPLORE_DOUBS: {
     url: "https://explore.doubs.fr/",
@@ -240,38 +231,38 @@ export const LINKS = {
 export const SEO_META = {
   INDEX: {
     title:
-      "Gîte La Randonnée | Les Fourgs, Doubs - Hébergement jusqu'à 14 personnes",
+      "Gîte La-Haut | Les Fourgs, Doubs - Hébergement jusqu'à 6 personnes",
     description:
-      "Découvrez le Gîte La Randonnée aux Fourgs, un hébergement spacieux pour 14 personnes au cœur des montagnes du Jura dans le Doubs. Idéal pour les vacances en famille, la randonnée en été, le ski de fond et alpin en hiver.",
+      "Découvrez le Gîte La-Haut aux Fourgs, un hébergement convivial pour 6 personnes au cœur des montagnes du Jura dans le Doubs. Idéal pour les vacances en famille, la randonnée en été, le ski de fond et alpin en hiver.",
   },
   ERROR: {
-    title: "Page non trouvée | Gîte La Randonnée aux Fourgs",
+    title: "Page non trouvée | Gîte La-Haut aux Fourgs",
     description:
       "La page que vous cherchez n'existe pas. Retournez à l'accueil pour découvrir notre gîte dans le Doubs.",
   },
   DECOUVRIR: {
-    title: "Activités été et hiver | Gîte La Randonnée aux Fourgs, Doubs",
+    title: "Activités été et hiver | Gîte La-Haut aux Fourgs, Doubs",
     description:
-      "Découvrez les activités variées autour du Gîte La Randonnée aux Fourgs : randonnée, ski de fond, ski alpin, raquettes, escalade et lacs en été. Un paradis pour les sportifs en toute saison dans le Doubs.",
+      "Découvrez les activités variées autour du Gîte La-Haut aux Fourgs : randonnée, ski de fond, ski alpin, raquettes, escalade et lacs en été. Un paradis pour les sportifs en toute saison dans le Doubs.",
   },
   CONDITION_GENERALE_LOCATION: {
-    title: "Conditions Générales de Location | Gîte La Randonnée aux Fourgs",
+    title: "Conditions Générales de Location | Gîte La-Haut aux Fourgs",
     description:
-      "Consultez les conditions générales de location du Gîte La Randonnée, hébergement pour 14 personnes aux Fourgs, dans le Doubs.",
+      "Consultez les conditions générales de location du Gîte La-Haut, hébergement pour 6 personnes aux Fourgs, dans le Doubs.",
   },
   DISPONIBILITES_TARIFS: {
-    title: "Reserver | Gîte La Randonnée aux Fourgs, Doubs",
+    title: "Reserver | Gîte La-Haut aux Fourgs, Doubs",
     description:
-      "Réservez votre séjour au Gîte La Randonnée aux Fourgs. Consultez nos disponibilités et tarifs pour un hébergement de 14 personnes dans le Doubs.",
+      "Réservez votre séjour au Gîte La-Haut aux Fourgs. Consultez nos disponibilités et tarifs pour un hébergement de 6 personnes dans le Doubs.",
   },
   MENTIONS_LEGALES: {
-    title: "Mentions Légales | Gîte La Randonnée aux Fourgs, Doubs",
+    title: "Mentions Légales | Gîte La-Haut aux Fourgs, Doubs",
     description:
-      "Informations légales concernant le Gîte La Randonnée, hébergement de vacances pour 14 personnes aux Fourgs, dans le Doubs.",
+      "Informations légales concernant le Gîte La-Haut, hébergement de vacances pour 6 personnes aux Fourgs, dans le Doubs.",
   },
   PLAN_DU_GITE: {
-    title: "Plan du Gîte | La Randonnée aux Fourgs - Hébergement 14 personnes",
+    title: "Plan du Gîte | La-Haut aux Fourgs - Hébergement 6 personnes",
     description:
-      "Découvrez le plan détaillé du Gîte La Randonnée, un hébergement spacieux pour 14 personnes aux Fourgs, dans les montagnes du Jura (Doubs).",
+      "Découvrez le plan détaillé du Gîte La-Haut, un hébergement convivial pour 6 personnes aux Fourgs, dans les montagnes du Jura (Doubs).",
   },
 };
