@@ -16,9 +16,5 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
-  }),
+  adapter: cloudflare(),
 });
