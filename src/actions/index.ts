@@ -22,8 +22,9 @@ export const server = {
 
       const { data: response, error } = await resend.emails.send({
         from: "nathan@n8js.com",
+        replyTo: data.email,
         to: [EMAIL],
-        subject: "Gîte: Nouveau message de la part de " + data.name,
+        subject: "[La-Haut] Nouveau message - " + data.name,
         html: `<p>Nom: ${data.name}</p><p>Email: ${data.email}</p><p>Message: ${data.message}</p>`,
       });
       console.log("🚀 ~ handler ~ response:", response);
