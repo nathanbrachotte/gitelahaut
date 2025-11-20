@@ -5,7 +5,7 @@ import {
   DecouvrirLaRegionLink,
   DispoLink,
 } from "@/components/Buttons";
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
 import { MobileMenu } from "@/components/MobileMenu";
 import { GiteLogoWrapper } from "@/components/GiteLogoWrapper";
 
@@ -19,7 +19,7 @@ const activePath = Astro.url.pathname;
         <GiteLogoWrapper />
       </div>
       <div class="flex flex-row flex-1 min-w-40 justify-start gap-2">
-        <Image
+        <!-- <Image
           src="/meuble-de-tourisme.webp"
           alt="Meublé de tourisme"
           class="w-10 sm:w-12 lg:w-16 h-auto object-contain shrink-0"
@@ -32,7 +32,7 @@ const activePath = Astro.url.pathname;
           class="w-16 sm:w-20 lg:w-24 h-auto object-contain shrink-0"
           width={232}
           height={120}
-        />
+        /> -->
       </div>
     </div>
     <MobileMenu activePath={activePath} client:load />
