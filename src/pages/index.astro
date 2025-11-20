@@ -8,21 +8,11 @@ import {
   MailButton,
 } from "@/components/Buttons";
 import { Gallery } from "@/components/Gallery";
-import {
-  // DarkGreenPlant,
-  // OrangeBush,
-  Diamond,
-  // OrangePlant,
-  // PinkFlower,
-  // YellowButterfly,
-  // DarkBluePlant,
-  // DarkGreenLeaf,
-  // LightGreenPlan,
-} from "@/components/icons";
-import { IMAGES, SEO_META } from "@/data";
+import { Diamond } from "@/components/icons";
+import { IMAGES, SEO_META } from "@/data.constants";
 import { cn } from "@/lib/utils";
 import { Link } from "@/components/Link";
-import { LINKS } from "@/data";
+import { LINKS } from "@/data.constants";
 import ContactForm from "@/components/ContactForm.astro";
 import Container from "@/components/Container.astro";
 ---
@@ -81,8 +71,8 @@ import Container from "@/components/Container.astro";
     >
       <div class="flex-1 w-full lg:w-1/2">
         <Image
-          src={IMAGES.EXTERIEUR_ARBRES.url}
-          alt={IMAGES.EXTERIEUR_ARBRES.alt}
+          src={IMAGES.EXTERIEUR_NEIGE_GRAND.url}
+          alt={IMAGES.EXTERIEUR_NEIGE_GRAND.alt}
           width={911}
           height={684}
           class="sm:rounded-lg"
@@ -139,8 +129,8 @@ import Container from "@/components/Container.astro";
     >
       <div class="flex-1 w-full block lg:hidden">
         <Image
-          src={IMAGES.EXTERIEUR_PARKING.url}
-          alt={IMAGES.EXTERIEUR_PARKING.caption}
+          src={IMAGES.ORNANS_ETE.url}
+          alt={IMAGES.ORNANS_ETE.caption}
           class="sm:rounded-lg"
           width={911}
           height={684}
@@ -204,8 +194,8 @@ import Container from "@/components/Container.astro";
       </div>
       <div class="flex-1 w-full lg:w-1/2 hidden lg:block">
         <Image
-          src={IMAGES.EXTERIEUR_PARKING.url}
-          alt={IMAGES.EXTERIEUR_PARKING.caption}
+          src={IMAGES.ORNANS_ETE.url}
+          alt={IMAGES.ORNANS_ETE.caption}
           class="sm:rounded-lg"
           width={911}
           height={684}

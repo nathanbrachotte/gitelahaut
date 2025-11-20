@@ -8,116 +8,49 @@ export const EMAIL = "gite.lahaut@gmail.com";
 export const MAX_PERSONS = 6;
 
 export const IMAGES = {
-  EXTERIEUR_ETE: {
-    url: "/gite/exterieur-ete.webp",
-    alt: "Le jardin en été",
-    caption: "Le jardin en été",
+  BEDROOM_DOUBLE_BED: {
+    url: "/gite/bedroom-double-bed.webp",
+    alt: "Chambre avec lit double",
+    caption: "Chambre avec lit double",
   },
-  CHAMBRE_BEIGE: {
-    url: "/gite/chambre-beige.webp",
-    alt: "Chambre beige",
-    caption: "Chambre beige",
-  },
-  CHAMBRE_ORANGE: {
-    url: "/gite/chambre-orange.webp",
-    alt: "Chambre orange",
-    caption: "Chambre orange",
-  },
-  CHAMBRE_VIOLETTE: {
-    url: "/gite/chambre-violette.webp",
-    alt: "Chambre violette",
-    caption: "Chambre violette",
-  },
-  EXTERIEUR_APERO: {
-    url: "/gite/exterieur-apero.webp",
-    alt: "Extérieur apero",
-    // caption: "Extérieur apero",
-  },
-  EXTERIEUR_ARBRES: {
-    url: "/gite/exterieur-arbres.jpg",
-    alt: "Extérieur arbres",
-    // caption: "Extérieur arbres",
-  },
-  EXTERIEUR_LOIN: {
-    url: "/gite/exterieur-loin.webp",
-    alt: "Extérieur loin",
-    // caption: "Extérieur loin",
-  },
-  EXTERIEUR_NEIGE: {
-    url: "/gite/exterieur-neige.webp",
-    alt: "Extérieur neige",
+  EXTERIEUR_NEIGE_GRAND: {
+    url: "/gite/exterieur-neige-grand.webp",
+    alt: "Extérieur enneigé",
     caption: "Le jardin enneigé",
-  },
-  EXTERIEUR_PARKING: {
-    url: "/gite/exterieur-parking.webp",
-    alt: "Extérieur parking",
-    caption: "Extérieur",
-  },
-  EXTERIEUR_TABLE_ENTREE: {
-    url: "/gite/exterieur-table-entree.webp",
-    alt: "Extérieur table d'entrée",
-    // caption: "Extérieur table d'entrée",
-  },
-  FONDUE: { url: "/gite/fondue.webp", alt: "Fondue", caption: "Fondue" },
-  INTERIEUR_ENTREE: {
-    url: "/gite/interieur-entree.webp",
-    alt: "Interieur entrée",
-    caption: "Entrée",
-  },
-  PETANQUE: {
-    url: "/gite/petanque.webp",
-    alt: "Pétanque",
-    caption: "Terrain de pétanque",
-  },
-  PETIT_SALON_COMPLET: {
-    url: "/gite/petit-salon-complet.webp",
-    alt: "Salle de détente avec lit double",
-    caption: "Salon détente",
-  },
-  PETIT_SALON: {
-    url: "/gite/petit-salon.webp",
-    alt: "Petit salon",
-    caption: "Petit salon",
-  },
-  PETITE_SALLE_DE_BAIN: {
-    url: "/gite/petite-salle-de-bain.webp",
-    alt: "Petite salle de bain",
-    caption: "Petite salle de bain",
-  },
-  SALON: { url: "/gite/salon.webp", alt: "Salon", caption: "Salon" },
-  VACHES: {
-    url: "/gite/vaches.webp",
-    alt: "Vaches",
-    // caption: "Vaches"
   },
   EXTERIEUR_SKI_DE_FOND: {
     url: "/gite/exterieur-ski-de-fond.webp",
     alt: "Extérieur ski de fond",
     caption: "Piste de ski de fond",
   },
-  INTERIEUR_CUISINE_2: {
-    url: "/gite/interieur-cuisine-2.webp",
-    alt: "Interieur cuisine 2",
+  KITCHEN: {
+    url: "/gite/kitchen.webp",
+    alt: "Cuisine",
     caption: "Cuisine",
   },
-  INTERIEUR_CUISINE_BAR: {
-    url: "/gite/interieur-cuisine-bar.webp",
-    alt: "Interieur cuisine bar",
-    caption: "Salle de vie",
+  LIVING_ROOM_2: {
+    url: "/gite/living-room-2.webp",
+    alt: "Salon",
+    caption: "Salon",
   },
-  INTERIEUR_CUISINE_TOUT: {
-    url: "/gite/interieur-cuisine-tout.webp",
-    alt: "Interieur cuisine",
-    caption: "Cuisine et salon",
+  LIVING_ROOM: {
+    url: "/gite/living-room.webp",
+    alt: "Salon",
+    caption: "Salon",
   },
-  INTERIEUR_FONDUE: {
-    url: "/gite/interieur-fondue.webp",
-    alt: "Fondue entre amis",
-    // caption: "Grande table",
+  ROOM_4_BEDS: {
+    url: "/gite/room-4-beds.webp",
+    alt: "Chambre avec 4 lits",
+    caption: "Chambre avec 4 lits",
+  },
+  TV_AREA: {
+    url: "/gite/tv-area.webp",
+    alt: "Espace télévision",
+    caption: "Espace détente",
   },
   INTERIEUR_SALON_ENTIER: {
-    url: "/gite/interieur-salon-entier.webp",
-    alt: "Interieur salon entier",
+    url: "/gite/living-room.webp",
+    alt: "Salle de vie",
     caption: "Salle de vie",
   },
   LES_FOURGS_LES_RANGS: {
@@ -139,31 +72,22 @@ export const IMAGES = {
     alt: "Vue sur les Alpes depuis Métabief",
     caption: "Les Alpes depuis Métabief",
   },
+  ORNANS_ETE: {
+    url: "/ornans.webp",
+    alt: "Ornans en été",
+    caption: "Ornans en été",
+  },
 };
 
 export const GALLERY = [
-  IMAGES.EXTERIEUR_PARKING,
-  IMAGES.EXTERIEUR_ETE,
-  IMAGES.EXTERIEUR_NEIGE,
-  IMAGES.CHAMBRE_BEIGE,
-  IMAGES.CHAMBRE_ORANGE,
-  IMAGES.CHAMBRE_VIOLETTE,
-  IMAGES.EXTERIEUR_ARBRES,
-  IMAGES.EXTERIEUR_LOIN,
-  // IMAGES.EXTERIEUR_TABLE_ENTREE,
-  // IMAGES.FONDUE,
-  IMAGES.INTERIEUR_ENTREE,
-  IMAGES.PETANQUE,
-  IMAGES.PETIT_SALON_COMPLET,
-  IMAGES.PETIT_SALON,
-  IMAGES.PETITE_SALLE_DE_BAIN,
-  IMAGES.SALON,
-  IMAGES.VACHES,
+  IMAGES.BEDROOM_DOUBLE_BED,
+  IMAGES.EXTERIEUR_NEIGE_GRAND,
   IMAGES.EXTERIEUR_SKI_DE_FOND,
-  IMAGES.INTERIEUR_CUISINE_2,
-  IMAGES.INTERIEUR_CUISINE_BAR,
-  IMAGES.INTERIEUR_CUISINE_TOUT,
-  IMAGES.INTERIEUR_FONDUE,
+  IMAGES.KITCHEN,
+  IMAGES.LIVING_ROOM_2,
+  IMAGES.LIVING_ROOM,
+  IMAGES.ROOM_4_BEDS,
+  IMAGES.TV_AREA,
   IMAGES.INTERIEUR_SALON_ENTIER,
   IMAGES.LES_FOURGS_LES_RANGS,
   IMAGES.METABIEF_NEIGE,
@@ -172,6 +96,10 @@ export const GALLERY = [
 ];
 
 export const LINKS = {
+  LA_RANDONNEE: {
+    url: "https://www.gitelarandonnee.fr/",
+    maps: "https://maps.app.goo.gl/YNhS2GD18NEDYzoy6",
+  },
   LES_RANGS: {
     url: "https://station-lesfourgs.fr/",
     maps: "https://maps.app.goo.gl/YV13tJYWUpUH9V1x7",
@@ -230,8 +158,7 @@ export const LINKS = {
 
 export const SEO_META = {
   INDEX: {
-    title:
-      "Gîte La-Haut | Les Fourgs, Doubs - Hébergement jusqu'à 6 personnes",
+    title: "Gîte La-Haut | Les Fourgs, Doubs - Hébergement jusqu'à 6 personnes",
     description:
       "Découvrez le Gîte La-Haut aux Fourgs, un hébergement convivial pour 6 personnes au cœur des montagnes du Jura dans le Doubs. Idéal pour les vacances en famille, la randonnée en été, le ski de fond et alpin en hiver.",
   },

@@ -5,7 +5,7 @@ import {
   PhoneIcon,
 } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { ADDRESS, EMAIL, LINKS, PHONE_NUMBER } from "@/data";
+import { ADDRESS, EMAIL, LINKS, PHONE_NUMBER } from "@/data.constants";
 import { cn } from "@/lib/utils";
 import { ROUTES } from "@/routes";
 import { useState } from "react";
@@ -249,7 +249,7 @@ export const AccueilLink = ({ activePath }: { activePath: string }) => {
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-purple-950": isActive,
+        "underline text-green-950": isActive,
       })}
     >
       <a href={link} aria-label="Accueil">
@@ -269,7 +269,7 @@ export const DispoLink = ({ activePath }: { activePath: string }) => {
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-purple-950": isActive,
+        "underline text-green-950": isActive,
       })}
     >
       <a href={link} aria-label="Disponibilités et Tarifs">
@@ -289,7 +289,7 @@ export const PlanLink = ({ activePath }: { activePath: string }) => {
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-purple-950": isActive,
+        "underline text-green-950": isActive,
       })}
     >
       <a href={link} aria-label="Plan du Gîte">
@@ -313,7 +313,7 @@ export const DecouvrirLaRegionLink = ({
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-purple-950": isActive,
+        "underline text-green-950": isActive,
       })}
     >
       <a href={link} aria-label="Découvrir la région">
