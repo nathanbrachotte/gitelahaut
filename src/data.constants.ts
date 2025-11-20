@@ -3,7 +3,7 @@ export const SHORT_NAME = "La-Haut";
 export const PHONE_NUMBER = "+33 6 51 47 97 43";
 export const WEBSITE_ADDRESS = "https://gitelahaut.com";
 export const ADDRESS = "102 Grande Rue, 25300 Les Fourgs";
-export const EMAIL = "gite.lahaut@gmail.com";
+export const EMAIL = "gite.larandonnee25@gmail.com";
 
 export const MAX_PERSONS = 6;
 
@@ -48,11 +48,6 @@ export const IMAGES = {
     alt: "Espace télévision",
     caption: "Espace détente",
   },
-  INTERIEUR_SALON_ENTIER: {
-    url: "/gite/living-room.webp",
-    alt: "Salle de vie",
-    caption: "Salle de vie",
-  },
   LES_FOURGS_LES_RANGS: {
     url: "/les-fourgs-les-rangs.webp",
     alt: "Les Rangs à 1km du Gîte",
@@ -88,7 +83,6 @@ export const GALLERY = [
   IMAGES.LIVING_ROOM,
   IMAGES.ROOM_4_BEDS,
   IMAGES.TV_AREA,
-  IMAGES.INTERIEUR_SALON_ENTIER,
   IMAGES.LES_FOURGS_LES_RANGS,
   IMAGES.METABIEF_NEIGE,
   IMAGES.METABIEF_FONDUE,
