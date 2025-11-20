@@ -361,5 +361,3 @@ export const LaRandonneeLink = () => {
     </div>
   );
 };
-
-// RentalToggleButton removed - single gite site
