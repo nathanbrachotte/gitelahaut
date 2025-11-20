@@ -342,7 +342,7 @@ export const FacebookLink = () => {
 export const LaRandonneeLink = () => {
   return (
     <div className="flex flex-col gap-1 justify-center items-center">
-      <Label>Besoin de plus de place?</Label>
+      <Label className="font-semibold">Besoin de plus de place?</Label>
       <Button
         asChild
         variant={"default"}
