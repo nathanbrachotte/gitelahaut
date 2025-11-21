@@ -48,6 +48,16 @@ export const IMAGES = {
     alt: "Espace télévision",
     caption: "Espace détente",
   },
+  VUE_EXTERIEURE: {
+    url: "/gite/vue-exterieure.webp",
+    alt: "Vue extérieure",
+    caption: "Vue extérieure",
+  },
+  ENTREE: {
+    url: "/gite/entree.webp",
+    alt: "Entrée",
+    caption: "Entrée",
+  },
   LES_FOURGS_LES_RANGS: {
     url: "/les-fourgs-les-rangs.webp",
     alt: "Les Rangs à 1km du Gîte",
@@ -83,6 +93,8 @@ export const GALLERY = [
   IMAGES.LIVING_ROOM,
   IMAGES.ROOM_4_BEDS,
   IMAGES.TV_AREA,
+  IMAGES.VUE_EXTERIEURE,
+  IMAGES.ENTREE,
   IMAGES.LES_FOURGS_LES_RANGS,
   IMAGES.METABIEF_NEIGE,
   IMAGES.METABIEF_FONDUE,
