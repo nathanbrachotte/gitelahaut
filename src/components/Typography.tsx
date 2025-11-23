@@ -145,9 +145,18 @@ export const Text = ({
   );
 };
 
-export const Quote = ({ children }: HTMLAttributes<HTMLHeadingElement>) => {
+export const Quote = ({
+  children,
+  className,
+  ...props
+}: HTMLAttributes<HTMLQuoteElement>) => {
   return (
-    <blockquote className="mt-6 border-l-2 pl-6 italic">{children}</blockquote>
+    <blockquote
+      className={cn("mt-6 border-l-2 pl-6 italic", className)}
+      {...props}
+    >
+      {children}
+    </blockquote>
   );
 };
 
@@ -157,10 +166,7 @@ export const Small = ({
 }: HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <small
-      className={cn(
-        "text-sm text-cyan-700 font-medium leading-none",
-        className,
-      )}
+      className={cn("text-sm text-primary font-medium leading-none", className)}
     >
       {children}
     </small>
