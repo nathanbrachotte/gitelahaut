@@ -5,7 +5,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { actions } from "astro:actions";
 import { LINKS } from "@/data.constants";
-import { CheckCircledIcon, CrossCircledIcon } from "@radix-ui/react-icons";
+import { CrossCircledIcon } from "@radix-ui/react-icons";
 import { MessageCircle, Star } from "lucide-react";
 import { H3, Text, Small, H2, Quote } from "./Typography";
 
