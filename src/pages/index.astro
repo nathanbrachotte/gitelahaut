@@ -16,6 +16,7 @@ import { Link } from "@/components/Link";
 import { LINKS } from "@/data.constants";
 import ContactForm from "@/components/ContactForm.astro";
 import Container from "@/components/Container.astro";
+import { NON_BREAKING_SPACE } from "@/constants";
 ---
 
 <Layout
@@ -41,8 +42,9 @@ import Container from "@/components/Container.astro";
     >
       <LandingH1>Bienvenue au Gîte La-Haut</LandingH1>
       <Text className="mt-4 mb-2 font-bold">
-        Venez découvrir les charmes de la montagne dans notre gîte dans le Doubs
-        situé à 1200m d'altitude, au cœur du village de Les Fourgs.
+        Venez découvrir les charmes de la montagne dans notre gîte “La-Haut”
+        d’inspiration vintage dans le Doubs situé à 1200m d'altitude, au cœur du
+        village de Les{NON_BREAKING_SPACE}Fourgs.
       </Text>
       <Text>
         Idéal pour les vacances en famille ou entre amis, notre gîte convivial
@@ -75,11 +77,11 @@ import Container from "@/components/Container.astro";
     >
       <div class="flex-1 w-full lg:w-1/2">
         <Image
-          src={IMAGES.ENTREE.url}
-          alt={IMAGES.ENTREE.alt}
-          width={911}
-          height={684}
-          class="sm:rounded-lg"
+          src={IMAGES.VUE_EXTERIEURE.url}
+          alt={IMAGES.VUE_EXTERIEURE.caption}
+          width={2464}
+          height={3280}
+          class="sm:rounded-lg aspect-square object-cover"
         />
       </div>
       <div class="flex-1 p-8 w-full lg:w-1/2">
@@ -105,8 +107,17 @@ import Container from "@/components/Container.astro";
               className="w-4 h-4 self-start shrink-0 text-primary mt-1 mr-1"
             />
 
-            Le gîte dispose d'un jardin clôturé avec une table extérieure, un
-            barbecue, une balançoire pour enfants et un espace de détente.
+            Situé au deuxième étage de notre maison avec son entrée
+            indépendante, notre meublé de tourisme d'inspiration vintage est un
+            véritable havre de paix pour 6 personnes.
+          </li>
+          <li class="flex items-start space-x-1 mt-2">
+            <Diamond
+              className="w-4 h-4 self-start shrink-0 text-primary mt-1 mr-1"
+            />
+
+            Il offre une vue imprenable sur la colline surmonté de la chapelle
+            du Tourillot et bénéficie d'une exposition plein sud.
           </li>
           <H3 className="mt-4">En hiver</H3>
           <li class="flex items-start space-x-1 mt-2">
@@ -181,8 +192,8 @@ import Container from "@/components/Container.astro";
           <Diamond
             className="w-4 h-4 self-start shrink-0 text-primary mt-1 mr-1"
           /><p>
-            Visitez le Château de Joux, les fromageries et les caves de
-            vieillissement du Comté.
+            Visitez le Château de Joux, les fromageries et les caves d'affinage
+            du Comté.
           </p>
         </li>
         <li class="flex items-start space-x-1 mt-2">

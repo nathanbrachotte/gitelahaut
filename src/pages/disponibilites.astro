@@ -5,7 +5,7 @@ import { LandingH2 } from "@/components/Typography";
 import Layout from "@/layouts/Layout.astro";
 // import CalendarDirect from "@/components/CalendarDirect.astro";
 // import ContactFormLarge from "@/components/ContactFormLarge.astro";
-// import PricesSection from "@/components/PricesSection.astro";
+import PricesSection from "@/components/PricesSection.astro";
 import {
   SEO_META,
   // LINKS
@@ -39,13 +39,13 @@ import Container from "@/components/Container.astro";
       </div>
 
       <H3 className="flex items-center justify-start gap-2 mt-10">
-        Nous contacter directement par e-mail
+        Par e-mail (sans frais ajoutés)
         <PinkFlower className="h-7 w-7" />
       </H3>
       <ContactFormLarge />
     </Card> -->
     <Card className="mt-3">
-      <!-- <PricesSection /> -->
+      <PricesSection />
     </Card>
   </Container>
 </Layout>

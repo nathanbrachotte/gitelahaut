@@ -12,14 +12,14 @@ export const MidWeekAlert = () => {
       <AlertDescription>
         <ul className="list-disc list-inside">
           <li>
-            <span className="font-bold">En été :</span> 560€
+            <span className="font-bold">En été :</span> 350€
           </li>
           <li>
-            <span className="font-bold">En hiver :</span> 580€
+            <span className="font-bold">En hiver :</span> 400€
           </li>
         </ul>
         <div className="flex items-center mt-2">
-          Pour les location en milieu de semaine, nous contacter directement
+          Pour les locations en milieu de semaine, nous contacter directement
           <MailIcon
             className="h-4 w-4 ml-1 stroke-primary cursor-pointer hover:opacity-70 transition-opacity"
             onClick={() => {
