@@ -17,6 +17,7 @@ type FeedbackState =
   | "error"
   | "redirecting";
 
+//! FIXME: STOP USING LUCIDE ICONS AND USE RADIX ONES.
 export const FeedbackForm = () => {
   const [rating, setRating] = React.useState<number>(0);
   const [comment, setComment] = React.useState("");
