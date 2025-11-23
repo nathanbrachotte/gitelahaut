@@ -10,7 +10,7 @@ export const LandingH1 = ({
   return (
     <h1
       className={cn(
-        "text-5xl font-extrabold tracking-tight lg:text-6xl font-logo text-primary",
+        "text-5xl font-extrabold tracking-tight lg:text-6xl font-logo text-cyan-700",
         className,
       )}
       {...props}
@@ -28,7 +28,7 @@ export const H1 = ({
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-primary",
+        "scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-cyan-700",
         className,
       )}
       {...props}
@@ -46,7 +46,7 @@ export const LandingH2 = ({
   return (
     <h2
       className={cn(
-        "text-4xl font-extrabold tracking-tight lg:text-5xl text-primary font-logo",
+        "text-4xl font-extrabold tracking-tight lg:text-5xl text-cyan-700 font-logo",
         className,
       )}
       {...props}
@@ -64,7 +64,7 @@ export const H2 = ({
   return (
     <h2
       className={cn(
-        "scroll-m-20 pb-2 text-2xl lg:text-3xl font-semibold tracking-tight first:mt-0 text-primary",
+        "scroll-m-20 pb-2 text-2xl lg:text-3xl font-semibold tracking-tight first:mt-0 text-cyan-700",
         className,
       )}
       {...props}
@@ -82,7 +82,7 @@ export const H3 = ({
   return (
     <h2
       className={cn(
-        "scroll-m-20 text-xl font-semibold tracking-tight text-primary",
+        "scroll-m-20 text-xl font-semibold tracking-tight text-cyan-700",
         className,
       )}
       {...props}
@@ -157,7 +157,10 @@ export const Small = ({
 }: HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <small
-      className={cn("text-sm text-primary font-medium leading-none", className)}
+      className={cn(
+        "text-sm text-cyan-700 font-medium leading-none",
+        className,
+      )}
     >
       {children}
     </small>

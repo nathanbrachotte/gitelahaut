@@ -162,7 +162,7 @@ export function CopyButton({
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.1 }}
           >
-            <CheckIcon className="w-4 h-4 text-primary" />
+            <CheckIcon className="w-4 h-4 text-cyan-700" />
           </motion.div>
         ) : (
           <motion.div
@@ -250,7 +250,7 @@ export const AccueilLink = ({ activePath }: { activePath: string }) => {
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-green-950": isActive,
+        "underline text-secondary": isActive,
       })}
     >
       <a href={link} aria-label="Accueil">
@@ -270,7 +270,7 @@ export const DispoLink = ({ activePath }: { activePath: string }) => {
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-green-950": isActive,
+        "underline text-secondary": isActive,
       })}
     >
       <a href={link} aria-label="Disponibilités et Tarifs">
@@ -290,7 +290,7 @@ export const PlanLink = ({ activePath }: { activePath: string }) => {
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-green-950": isActive,
+        "underline text-secondary": isActive,
       })}
     >
       <a href={link} aria-label="Plan du Gîte">
@@ -314,7 +314,7 @@ export const DecouvrirLaRegionLink = ({
       variant={"link"}
       size={"lg"}
       className={cn("px-3", {
-        "underline text-green-950": isActive,
+        "underline text-secondary": isActive,
       })}
     >
       <a href={link} aria-label="Découvrir la région">

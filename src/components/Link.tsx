@@ -15,9 +15,9 @@ export const Link: React.FC<LinkProps> = ({
   return (
     <a
       className={cn(
-        "cursor-pointer text-green-800 underline decoration-green-800 decoration-[0.1em] underline-offset-2 transition-all",
-        "visited:text-indigo-700 visited:decoration-indigo-700",
-        "hover:decoration-green-400 hover:text-green-400",
+        "cursor-pointer text-cyan-800 underline decoration-cyan-800 decoration-[0.1em] underline-offset-2 transition-all",
+        "visited:text-cyan-800 visited:decoration-cyan-800",
+        "hover:decoration-cyan-900 hover:text-cyan-900",
         className,
       )}
       target={target}

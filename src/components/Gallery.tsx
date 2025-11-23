@@ -20,7 +20,7 @@ export function Gallery() {
               {"caption" in image && typeof image.caption === "string" ? (
                 <div
                   className={cn(
-                    "z-10 text-xs bottom-0.5 p-1.5 sm:text-sm text-primary absolute sm:bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-lg pointer-events-none",
+                    "z-10 text-xs bottom-0.5 p-1.5 sm:text-sm text-cyan-700 absolute sm:bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-lg pointer-events-none",
                     "text-nowrap",
                   )}
                 >

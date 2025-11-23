@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 142 20% 98%; /* Very light green-tinted white */
-    --foreground: 142 15% 10%; /* Dark green-gray */
-    --card: 142 25% 97%; /* Light green-tinted card */
-    --card-foreground: 142 15% 10%;
-    --popover: 142 25% 96%;
-    --popover-foreground: 142 15% 5%;
-    --primary: 142 45% 35%; /* Rich forest green */
-    --primary-foreground: 0 0% 100%; /* White text on green */
-    --secondary: 32 35% 60%; /* Warm wood beige */
-    --secondary-foreground: 32 30% 10%; /* Dark brown text on wood */
-    --muted: 142 15% 88%; /* Soft green-gray */
-    --muted-foreground: 142 10% 40%;
-    --accent: 142 30% 85%; /* Light green accent */
-    --accent-foreground: 142 20% 15%;
+    --background: 199 20% 98%; /* Very light sky-tinted white */
+    --foreground: 199 89% 18%; /* cyan-700 for text */
+    --card: 199 25% 97%; /* Light sky-tinted card */
+    --card-foreground: 199 89% 18%; /* cyan-700 */
+    --popover: 199 25% 96%;
+    --popover-foreground: 199 89% 18%; /* cyan-700 */
+    --primary: 192.86 68.293% 32.157%;
+    --primary-foreground: 0 0% 100%; /* White text on sky */
+    --secondary: 165.29 100% 14.846%; /* cyan-700 */
+    --secondary-foreground: 199 89% 18%; /* cyan-700 */
+    --muted: 199 15% 88%; /* Soft sky-gray */
+    --muted-foreground: 199 89% 18%; /* cyan-700 */
+    --accent: 199 30% 85%; /* Light sky accent */
+    --accent-foreground: 20.897, 96.651%, 13.937%; /* cyan-700 */
     --destructive: 0 65% 50%; /* Red for errors */
     --destructive-foreground: 0 0% 100%;
-    --border: 142 20% 80%; /* Medium green-gray border */
-    --input: 142 20% 92%; /* Light green input background */
-    --ring: 142 45% 35%; /* Green ring matching primary */
+    --border: 199 20% 80%; /* Medium sky-gray border */
+    --input: 199 20% 92%; /* Light sky input background */
+    --ring: 199 90% 48%; /* Sky ring matching primary */
     --radius: 0.5rem;
 
     --pastel-blue: 216 100% 83%; /* #A6CAFF */
