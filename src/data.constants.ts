@@ -1,4 +1,4 @@
-export const NAME = "Gîte La-Haut";
+export const NAME = "Gîte Là-Haut";
 export const SHORT_NAME = "La-Haut";
 export const PHONE_NUMBER = "+33 6 51 47 97 43";
 export const WEBSITE_ADDRESS = "https://gitelahaut.com";

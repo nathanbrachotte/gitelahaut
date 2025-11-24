@@ -3,11 +3,12 @@ import Layout from "@/layouts/Layout.astro";
 import { FeedbackForm } from "@/components/FeedbackForm";
 import Container from "@/components/Container.astro";
 import { LandingH2 } from "@/components/Typography";
+import { NAME } from "@/data.constants";
 ---
 
 <Layout
   title="Votre avis nous intéresse | Gîte La-Haut"
-  description="Partagez votre expérience au Gîte La-Haut. Votre avis nous aide à améliorer nos services."
+  description=`Partagez votre expérience au ${NAME}. Votre avis nous aide à améliorer nos services.`
   withPadding={true}
 >
   <Container>

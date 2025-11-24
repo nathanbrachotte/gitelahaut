@@ -17,6 +17,7 @@ import { LINKS } from "@/data.constants";
 import ContactForm from "@/components/ContactForm.astro";
 import Container from "@/components/Container.astro";
 import { NON_BREAKING_SPACE } from "@/constants";
+import { NAME } from "@/data.constants";
 ---
 
 <Layout
@@ -40,7 +41,7 @@ import { NON_BREAKING_SPACE } from "@/constants";
         "rounded-lg",
       )}
     >
-      <LandingH1>Bienvenue au Gîte La-Haut</LandingH1>
+      <LandingH1>Bienvenue au {NAME}</LandingH1>
       <Text className="mt-4 mb-2 font-bold">
         Venez découvrir les charmes de la montagne dans notre gîte “La-Haut”
         d’inspiration vintage dans le Doubs situé à 1200m d'altitude, au cœur du
