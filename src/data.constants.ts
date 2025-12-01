@@ -82,6 +82,11 @@ export const IMAGES = {
     alt: "Ornans en été",
     caption: "Ornans en été",
   },
+  LES_RASSES: {
+    url: "/les-rasses.webp",
+    alt: "Les Rasses - Station de ski",
+    caption: "Les Rasses - Station de ski",
+  },
 };
 
 export const GALLERY = [
@@ -143,7 +148,7 @@ export const LINKS = {
       "https://www.bourgognefranchecomte.com/activites/en-hauteur/escalade-via-ferrata/",
   },
   FACEBOOK: {
-    url: "https://www.facebook.com/gitelahaut.lesfourgs",
+    url: "https://www.facebook.com/larandonnee.lesfourgs",
   },
   METABIEF_ADVENTURE: {
     url: "https://www.metabiefaventures.fr/",
@@ -160,9 +165,11 @@ export const LINKS = {
   SINGLE_TRACK: {
     url: "https://www.destination-haut-doubs.com/pumptrack-singletrack.html",
   },
+  LES_RASSES: {
+    url: "https://www.stations-de-ski.ch/stations-de-ski-vaudoises/station-de-ski-sainte-croix-les-rasses/",
+  },
   GITE_LA_HAUT: {
-    reviewUrl:
-      "https://www.google.com/maps/place/G%C3%AEte+La+Randonn%C3%A9e/@46.8328788,6.410896,17.04z/data=!4m6!3m5!1s0x478dba293db6ff3f:0xff9bb7c345ee2191!8m2!3d46.8335498!4d6.411368!16s%2Fg%2F119tjs05b?entry=ttu&g_ep=EgoyMDI1MTEyMC4xIKXMDSoASAFQAw%3D%3D",
+    reviewUrl: "https://maps.app.goo.gl/qMUVEo7cDwtYHdhZ8",
   },
 } as const;
 

@@ -22,11 +22,11 @@ export type Props = {
 <script is:inline define:vars={{ ingenieCode, siteUrl }}>
   // Widget pour les disponibilités uniquement
   const widget_dispo = new IngenieWidgetDispoResa.Client({
-    code: "HLOBFC025334000496",
-    url: "https://www.destination-haut-doubs.com",
-    elementHtml: "widget-fiche-ingenie-dispo",
-    enable_dispo: true,
-    enable_resa: false,
+    code: "HLOBFC000V53NN72", // Code de la prestation
+    url: "https://www.destination-haut-doubs.com", //(string) Url du site (dynamique)
+    elementHtml: "widget-fiche-ingenie-dispo", //(string) Identifiant destination HTML du widget
+    enable_dispo: true, // Active dispo
+    enable_resa: false, // Désactive résa
     styles: {
       direction: "horizontal",
       responsiveAt: "900",
