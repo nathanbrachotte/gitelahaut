@@ -1,0 +1,28 @@
+---
+import { Diamond } from "@/components/icons";
+
+type Props = {
+  items?: string[];
+};
+
+const defaultItems = [
+  "Le gîte est situé au deuxième étage et n'est pas desservi par un ascenseur.",
+  "Afin de garantir le bien-être de tous nos hôtes, les animaux ne sont pas admis dans le gîte.",
+];
+
+const { items = defaultItems } = Astro.props;
+---
+
+<div class="gite-access-info mt-4">
+  <ul class="space-y-2">
+    {items.map((item) => (
+      <li class="flex items-start space-x-1">
+        <Diamond
+          className="w-4 h-4 self-start shrink-0 text-cyan-700 mt-1 mr-1"
+          client:load
+        />
+        <span class="text-card-foreground">{item}</span>
+      </li>
+    ))}
+  </ul>
+</div>
