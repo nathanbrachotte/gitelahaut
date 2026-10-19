@@ -192,7 +192,7 @@ export const SEO_META = {
       "Consultez les conditions générales de location du Gîte La-Haut, hébergement pour 6 personnes aux Fourgs, dans le Doubs.",
   },
   DISPONIBILITES_TARIFS: {
-    title: "Reserver | Gîte La-Haut aux Fourgs, Doubs",
+    title: "Réserver/Disponibilités | Gîte La-Haut aux Fourgs, Doubs",
     description:
       "Réservez votre séjour au Gîte La-Haut aux Fourgs. Consultez nos disponibilités et tarifs pour un hébergement de 6 personnes dans le Doubs.",
   },
