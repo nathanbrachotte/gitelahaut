@@ -17,6 +17,9 @@ export const MidWeekAlert = () => {
           <li>
             <span className="font-bold">En hiver :</span> 400€
           </li>
+          <li>
+            <span className="font-bold">Long weekend (3 nuits) :</span> 450€
+          </li>
         </ul>
         <div className="flex items-center mt-2">
           Pour les locations en milieu de semaine, nous contacter directement
