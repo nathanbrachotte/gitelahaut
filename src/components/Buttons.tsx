@@ -360,7 +360,7 @@ export const LaRandonneeLink = () => {
           rel="noreferrer noopener"
           aria-label="Découvrir le Gîte La Randonnée"
         >
-          Gîte La Randonnée (15 personnes)
+          Gîte La Randonnée (14 personnes)
           <ArrowRightIcon className="group-hover:translate-x-1 transition-transform duration-300 w-4 h-4 ml-2" />
         </a>
       </Button>

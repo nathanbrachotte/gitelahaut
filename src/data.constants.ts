@@ -9,10 +9,181 @@ export const MAX_PERSONS = 6;
 
 export const GEO = { latitude: 46.8335498, longitude: 6.411368 };
 
+const SUMMER_WEEK = { period: "Vacances d'été", price: 550 };
+
+const WEEKEND_ROWS = [
+  { period: "Week-end en été (2 nuits)", price: 350 },
+  { period: "Week-end en hiver (2 nuits)", price: 400 },
+  { period: "Long week-end (3 nuits)", price: 450 },
+];
+
+const WEEK_GROUPS = [
+  {
+    title: "Semaine, vacances scolaires",
+    rows: [
+      { period: "Vacances de Pâques", price: 450 },
+      SUMMER_WEEK,
+      { period: "Vacances de Toussaint", price: 450 },
+      { period: "Vacances de Noël", price: 800 },
+      { period: "Vacances de février", price: 800 },
+    ],
+  },
+  {
+    title: "Semaine, hors vacances scolaires",
+    rows: [
+      { period: "Janvier, février, mars", price: 600 },
+      { period: "Mai, juin et septembre", price: 450 },
+      { period: "Octobre, novembre, décembre", price: 450 },
+    ],
+  },
+];
+
+/** Prices shown on /disponibilites/ */
+export const PRICE_GROUPS = [
+  ...WEEK_GROUPS,
+  { title: "Week-end", rows: WEEKEND_ROWS },
+];
+
+/** Worked example under the price table */
+export const PRICE_EXAMPLE = SUMMER_WEEK;
+
+const WEEK_PRICES = WEEK_GROUPS.flatMap((group) =>
+  group.rows.map((row) => row.price),
+);
+const WEEKEND_PRICES = WEEKEND_ROWS.map((row) => row.price);
+
 export const PRICES = {
-  WEEK_FROM: 450,
-  WEEKEND_FROM: 350,
+  WEEK_FROM: Math.min(...WEEK_PRICES),
+  WEEK_TO: Math.max(...WEEK_PRICES),
+  WEEKEND_FROM: Math.min(...WEEKEND_PRICES),
 };
+
+export const PRICE_EXTRAS = [
+  {
+    label: "Charges, serviettes de toilette et location de draps",
+    value: "compris dans le prix",
+  },
+  { label: "Taxe de séjour", value: "0,99 € par nuit et par adulte" },
+  { label: "Forfait ménage", value: "60 €" },
+];
+
+/** Driving distances from 102 Grande Rue (OpenStreetMap routing, October 2026) */
+export const DISTANCES = [
+  { name: "Station de ski des Fourgs", distance: "500 m", duration: "à pied" },
+  { name: "Château de Joux", distance: "10 km", duration: "15 min" },
+  {
+    name: "Métabief (station de ski)",
+    distance: "10 km",
+    duration: "15-20 min",
+  },
+  { name: "Pontarlier", distance: "12 km", duration: "15 min" },
+  {
+    name: "Sainte-Croix / Les Rasses (Suisse)",
+    distance: "14 km",
+    duration: "20 min",
+  },
+  {
+    name: "Lac de Saint-Point (Malbuisson)",
+    distance: "15 km",
+    duration: "20 min",
+  },
+  {
+    name: "Gare TGV de Frasne (Paris-Lausanne)",
+    distance: "30 km",
+    duration: "35 min",
+  },
+  { name: "Lausanne", distance: "56 km", duration: "1 h" },
+  { name: "Besançon", distance: "70 km", duration: "1 h 15" },
+  { name: "Aéroport de Genève", distance: "103 km", duration: "1 h 30" },
+];
+
+export const GITE_FACTS = [
+  { label: "Capacité", value: `${MAX_PERSONS} personnes` },
+  {
+    label: "Chambres",
+    value: "2 chambres : 1 lit double, 1 chambre avec 4 lits",
+  },
+  { label: "Salle de bain", value: "1 salle de bain" },
+  {
+    label: "Accès",
+    value: "2e étage, entrée indépendante, sans ascenseur",
+  },
+  { label: "Classement", value: "Meublé de tourisme 2 étoiles" },
+  { label: "Altitude", value: "1200 m, exposition plein sud" },
+  { label: "Inclus", value: "Wifi, draps et serviettes de toilette" },
+  { label: "Règles", value: "Non-fumeur, animaux non admis" },
+  {
+    label: "Arrivée / départ",
+    value: "Semaine : samedi dès 16h, départ 10h",
+  },
+  {
+    label: "Tarifs",
+    value: `Semaine dès ${PRICES.WEEK_FROM} €, week-end dès ${PRICES.WEEKEND_FROM} €`,
+  },
+  {
+    label: "À proximité",
+    value:
+      "Station des Fourgs à 500 m, Métabief à 10 min en voiture, frontière suisse",
+  },
+  { label: "Ski de fond", value: "Pistes accessibles depuis le jardin" },
+];
+
+export const FAQ = [
+  {
+    question: "Combien de personnes peut accueillir le gîte ?",
+    answer:
+      "Jusqu'à 6 personnes, dans 2 chambres : une chambre avec un lit double et une chambre avec 4 lits. Le gîte a une salle de bain.",
+  },
+  {
+    question: "Comment accède-t-on au gîte ?",
+    answer:
+      "Le gîte est au 2e étage d'une maison, avec une entrée indépendante. Il n'y a pas d'ascenseur.",
+  },
+  {
+    question: "Les draps et serviettes sont-ils fournis ?",
+    answer:
+      "Oui, les draps et les serviettes de toilette sont compris pour 6 personnes, ainsi que le wifi. Un kit literie supplémentaire coûte 8 € par lit de 90 et 16 € par lit de 140. Les sacs de couchage sont interdits.",
+  },
+  {
+    question: "Les animaux sont-ils acceptés ?",
+    answer: "Non, les animaux ne sont pas admis dans le gîte.",
+  },
+  {
+    question: "Quels sont les horaires d'arrivée et de départ ?",
+    answer:
+      "À la semaine : arrivée le samedi à partir de 16h, départ avant 10h. En week-end : arrivée le vendredi à partir de 16h, départ le dimanche avant 17h.",
+  },
+  {
+    question: "Le ménage est-il compris ?",
+    answer:
+      "Le forfait ménage de fin de séjour (60 €) est compris dans le contrat : il suffit de rendre le gîte rangé, poubelles vidées et draps retirés des lits. Une taxe de séjour de 0,99 € par nuit et par adulte s'ajoute au prix.",
+  },
+  {
+    question: "Comment réserver ?",
+    answer:
+      "Par e-mail, sans frais ajoutés, ou en ligne via l'office de tourisme du Pays du Haut-Doubs (validation automatique, avec frais de gestion).",
+  },
+  {
+    question: "Peut-on skier depuis le gîte ?",
+    answer:
+      "Oui. Les pistes de ski de fond partent du jardin, la station de ski des Fourgs est à 500 m et la station de Métabief à 10 km.",
+  },
+  {
+    question: "Comment venir au gîte ?",
+    answer:
+      "Le gîte est au 102 Grande Rue aux Fourgs, à 12 km de Pontarlier. La gare TGV la plus proche est Frasne (ligne Paris-Lausanne), à 30 km. Lausanne est à environ 1 h et l'aéroport de Genève à 1 h 30.",
+  },
+  {
+    question: "Peut-on fumer dans le gîte ?",
+    answer:
+      "Non, le gîte est non-fumeur. Un espace fumeur est prévu à l'extérieur.",
+  },
+  {
+    question: "Nous sommes plus de 6, avez-vous une autre solution ?",
+    answer:
+      "Le Gîte La Randonnée, à la même adresse, accueille jusqu'à 14 personnes. Contactez-nous pour réserver les deux.",
+  },
+];
 
 export const IMAGES = {
   BEDROOM_DOUBLE_BED: {

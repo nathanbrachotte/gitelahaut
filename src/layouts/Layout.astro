@@ -83,30 +83,25 @@ const schema = isHome
         image: ogImage,
       }}
       extend={{
-        meta: [
-          { name: "author", content: "Nathan Brachotte" },
-        ],
+        meta: [{ name: "author", content: "Nathan Brachotte" }],
       }}
     />
     {
       schema && (
-        <script
-          type="application/ld+json"
-          set:html={JSON.stringify(schema)}
-        />
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
       )
     }
     {ignoreViewTransitions ? null : <ViewTransitions />}
   </head>
   <body
-    class={cn(
-      "min-h-screen flex flex-col justify-between items-stretch min-w-full",
-      { "pb-20 lg:pb-0": showBookingCta },
-    )}
+    class={cn("min-h-screen flex flex-col items-stretch min-w-full", {
+      "pb-20 lg:pb-0": showBookingCta,
+    })}
   >
     <Header />
     <div
       class={cn(
+        "flex-1",
         {
           "px-4 md:px-8 mb-8 mt-8": withPadding,
         },

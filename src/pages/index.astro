@@ -19,6 +19,7 @@ import Container from "@/components/Container.astro";
 import { NON_BREAKING_SPACE } from "@/constants";
 import { NAME } from "@/data.constants";
 import GiteFacts from "@/components/GiteFacts.astro";
+import Faq from "@/components/Faq.astro";
 import { ROUTES } from "@/routes";
 ---
 
@@ -128,9 +129,9 @@ import { ROUTES } from "@/routes";
           </li>
           <li class="flex items-start space-x-1 mt-2">
             <Diamond
-            className="w-4 h-4 self-start shrink-0 text-cyan-700 mt-1 mr-1"
+              className="w-4 h-4 self-start shrink-0 text-cyan-700 mt-1 mr-1"
             />
-            
+
             Il offre une vue imprenable sur la colline surmonté de la chapelle
             du Tourillot et bénéficie d'une exposition plein sud.
           </li>
@@ -242,6 +243,7 @@ import { ROUTES } from "@/routes";
   </section>
   <GiteFacts />
   <Gallery client:visible />
+  <Faq />
   <Container>
     <ContactForm />
   </Container>

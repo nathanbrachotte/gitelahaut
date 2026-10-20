@@ -59,13 +59,29 @@ const vacationRental = {
   petsAllowed: false,
   smokingAllowed: false,
   starRating: { "@type": "Rating", ratingValue: 2 },
-  priceRange: `${PRICES.WEEKEND_FROM} € - 800 €`,
+  priceRange: `${PRICES.WEEKEND_FROM} € - ${PRICES.WEEK_TO} €`,
   amenityFeature: [
-    { "@type": "LocationFeatureSpecification", name: "Wifi gratuit", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Draps et serviettes fournis", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Cuisine équipée", value: true },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Wifi gratuit",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Draps et serviettes fournis",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Cuisine équipée",
+      value: true,
+    },
     { "@type": "LocationFeatureSpecification", name: "Jardin", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Télévision", value: true },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Télévision",
+      value: true,
+    },
   ],
   sameAs: [LINKS.OFFICE_TOURISME_GITE.url],
   containsPlace: {

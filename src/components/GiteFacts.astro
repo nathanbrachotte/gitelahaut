@@ -1,37 +1,6 @@
 ---
 import { LandingH2 } from "@/components/Typography";
-import { MAX_PERSONS, PRICES } from "@/data.constants";
-
-const facts = [
-  { label: "Capacité", value: `${MAX_PERSONS} personnes` },
-  {
-    label: "Chambres",
-    value: "2 chambres : 1 lit double, 1 chambre avec 4 lits",
-  },
-  { label: "Salle de bain", value: "1 salle de bain" },
-  {
-    label: "Accès",
-    value: "2e étage, entrée indépendante, sans ascenseur",
-  },
-  { label: "Classement", value: "Meublé de tourisme 2 étoiles" },
-  { label: "Altitude", value: "1200 m, exposition plein sud" },
-  { label: "Inclus", value: "Wifi, draps et serviettes de toilette" },
-  { label: "Règles", value: "Non-fumeur, animaux non admis" },
-  {
-    label: "Arrivée / départ",
-    value: "Semaine : samedi dès 16h, départ 10h",
-  },
-  {
-    label: "Tarifs",
-    value: `Semaine dès ${PRICES.WEEK_FROM} €, week-end dès ${PRICES.WEEKEND_FROM} €`,
-  },
-  {
-    label: "À proximité",
-    value:
-      "Station des Fourgs à 500 m, Métabief à 10 min en voiture, frontière suisse",
-  },
-  { label: "Ski de fond", value: "Pistes accessibles depuis le jardin" },
-];
+import { GITE_FACTS } from "@/data.constants";
 ---
 
 <section id="en-bref" class="mt-12 flex justify-center px-4">
@@ -39,9 +8,9 @@ const facts = [
     <LandingH2 className="text-center mb-8">Le gîte en bref</LandingH2>
     <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {
-        facts.map((fact) => (
+        GITE_FACTS.map((fact) => (
           <div class="bg-card border-2 rounded-lg p-4">
-            <dt class="font-bold text-cyan-700">{fact.label}</dt>
+            <dt class="font-bold text-primary">{fact.label}</dt>
             <dd class="mt-1">{fact.value}</dd>
           </div>
         ))
