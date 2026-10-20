@@ -1,6 +1,6 @@
 import { Link } from "@/components/Link";
 import { GiteLogo } from "@/components/logo";
-import { H2, Small } from "@/components/Typography";
+import { Small } from "@/components/Typography";
 import { NAME, PHONE_NUMBER } from "@/data.constants";
 import { PhoneIcon } from "./icons";
 import { ROUTES } from "@/routes";
@@ -15,7 +15,9 @@ export function GiteLogoWrapper() {
       </Link>
       <div className="flex flex-col items-start">
         <Link href={homePagePath} target="_self" className="no-underline">
-          <H2 className="whitespace-nowrap font-logo -mb-3">{NAME}</H2>
+          <p className="scroll-m-20 pb-2 text-2xl lg:text-3xl font-semibold tracking-tight text-cyan-700 whitespace-nowrap font-logo -mb-3">
+            {NAME}
+          </p>
         </Link>
         <Small className="text-xs flex flex-row gap-0.5 relative select-all">
           <PhoneIcon className="w-4 h-4" />

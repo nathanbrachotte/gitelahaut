@@ -2,7 +2,7 @@
 import Card from "@/components/Card.astro";
 import Container from "@/components/Container.astro";
 import { Link } from "@/components/Link";
-import { LandingH2 } from "@/components/Typography";
+import { LandingH1, LandingH2 } from "@/components/Typography";
 import { SEO_META } from "@/data.constants";
 import { LINKS } from "@/data.constants";
 import Layout from "@/layouts/Layout.astro";
@@ -11,9 +11,12 @@ import Layout from "@/layouts/Layout.astro";
 <Layout
   title={SEO_META.DECOUVRIR.title}
   description={SEO_META.DECOUVRIR.description}
+  breadcrumb="Découvrir la région"
 >
   <Container>
-    <LandingH2 className="text-center">Aux Fourgs</LandingH2>
+    <LandingH1 className="text-center text-4xl lg:text-5xl">
+      Activités aux Fourgs
+    </LandingH1>
     <Card className="mt-4">
       <div class="flex flex-col gap-4 md:flex-row justify-center items-center">
         <div class="flex-1 flex">
@@ -28,7 +31,7 @@ import Layout from "@/layouts/Layout.astro";
             <li>
               <span class="font-bold">Ski de fond:</span> discipline populaire dans
               la région, avec plus de 100 kilomètres de pistes dans des espaces naturels
-              entre les collines et les forêts. La piste multi-activté passe directement
+              entre les collines et les forêts. La piste multi-activités passe directement
               derrière le jardin! Une piste de ski nocturne est ouverte le mardi
               et jeudi à <Link href={LINKS.LA_COUPE.url}>la Coupe</Link>.
             </li>
@@ -76,8 +79,8 @@ import Layout from "@/layouts/Layout.astro";
           Le <Link href={LINKS.ST_POINT.maps}>lac Saint-Point</Link> offre un magnifique
           panorama entouré de forêts de sapins. Il est possible de pratiquer la baignade,
           la pêche, la randonnée, le vélo, les activités nautiques comme la voile
-          ou le canoë. Il y a aussi des aires de pique- nique et des terrains de
-          jeux pour les entants. Il est également connu pour être un spot populaire
+          ou le canoë. Il y a aussi des aires de pique-nique et des terrains de
+          jeux pour les enfants. Il est également connu pour être un spot populaire
           pour les activités nautiques comme le pédalo, le kayak et le stand-up paddle.
         </p>
       </Card>
@@ -111,8 +114,8 @@ import Layout from "@/layouts/Layout.astro";
       </Card>
       <Card title="Encore plus d'activités">
         <p class="mt-2">
-          Chien de traineaux, caves d'affinage, grottes, pêche, accro-branches,
-          disc golf... Pour découvrir toutes les autres activités et les site
+          Chiens de traîneau, caves d'affinage, grottes, pêche, accro-branches,
+          disc golf... Pour découvrir toutes les autres activités et les sites
           touristiques qu'offre la région, n'hésitez pas à vous rendre à <Link
             href={LINKS.OFFICE_DE_TOURISME.maps}
             >l'office de tourisme du village.</Link

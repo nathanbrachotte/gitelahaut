@@ -2,17 +2,20 @@
 import Layout from "@/layouts/Layout.astro";
 import { FeedbackForm } from "@/components/FeedbackForm";
 import Container from "@/components/Container.astro";
-import { LandingH2 } from "@/components/Typography";
-import { NAME } from "@/data.constants";
+import { LandingH1 } from "@/components/Typography";
+import { SEO_META } from "@/data.constants";
 ---
 
 <Layout
-  title="Votre avis nous intéresse | Gîte La-Haut"
-  description=`Partagez votre expérience au ${NAME}. Votre avis nous aide à améliorer nos services.`
+  title={SEO_META.AVIS.title}
+  description={SEO_META.AVIS.description}
   withPadding={true}
+  noindex
 >
   <Container>
-    <LandingH2 className="text-center">Votre avis nous intéresse</LandingH2>
+    <LandingH1 className="text-center text-4xl lg:text-5xl">
+      Votre avis nous intéresse
+    </LandingH1>
     <div class="mt-4 max-w-2xl mx-auto">
       <FeedbackForm client:load />
     </div>

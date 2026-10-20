@@ -1,5 +1,5 @@
 export const NAME = "Gîte Là-Haut";
-export const SHORT_NAME = "La-Haut";
+export const SHORT_NAME = "Là-Haut";
 export const PHONE_NUMBER = "+33 6 51 47 97 43";
 export const WEBSITE_ADDRESS = "https://gitelahaut.com";
 export const ADDRESS = "102 Grande Rue, 25300 Les Fourgs";
@@ -7,80 +7,110 @@ export const EMAIL = "gite.larandonnee25+lahaut@gmail.com";
 
 export const MAX_PERSONS = 6;
 
+export const GEO = { latitude: 46.8335498, longitude: 6.411368 };
+
+export const PRICES = {
+  WEEK_FROM: 450,
+  WEEKEND_FROM: 350,
+};
+
 export const IMAGES = {
   BEDROOM_DOUBLE_BED: {
     url: "/gite/bedroom-double-bed.webp",
-    alt: "Chambre avec lit double",
+    alt: "Chambre avec lit double du Gîte Là-Haut",
     caption: "Chambre avec lit double",
+    width: 1600,
+    height: 1200,
   },
   EXTERIEUR_NEIGE_GRAND: {
     url: "/gite/exterieur-neige-grand.webp",
-    alt: "Extérieur enneigé",
+    alt: "Jardin enneigé du gîte aux Fourgs en hiver",
     caption: "Le jardin enneigé",
+    width: 911,
+    height: 684,
   },
   EXTERIEUR_SKI_DE_FOND: {
     url: "/gite/exterieur-ski-de-fond.webp",
-    alt: "Extérieur ski de fond",
+    alt: "Piste de ski de fond au départ du jardin du gîte",
     caption: "Piste de ski de fond",
+    width: 1200,
+    height: 1600,
   },
   KITCHEN: {
     url: "/gite/kitchen.webp",
-    alt: "Cuisine",
+    alt: "Cuisine équipée du Gîte Là-Haut",
     caption: "Cuisine",
+    width: 1600,
+    height: 1200,
   },
   LIVING_ROOM_2: {
     url: "/gite/living-room-2.webp",
-    alt: "Salon",
+    alt: "Salon vintage avec canapé du Gîte Là-Haut",
     caption: "Salon",
+    width: 1600,
+    height: 1200,
   },
   LIVING_ROOM: {
     url: "/gite/living-room.webp",
-    alt: "Salon",
+    alt: "Salon et coin repas du Gîte Là-Haut aux Fourgs",
     caption: "Salon",
+    width: 1600,
+    height: 1200,
   },
   ROOM_4_BEDS: {
     url: "/gite/room-4-beds.webp",
     alt: "Chambre avec 4 lits",
     caption: "Chambre avec 4 lits",
+    width: 1600,
+    height: 1200,
   },
   TV_AREA: {
     url: "/gite/tv-area.webp",
-    alt: "Espace télévision",
+    alt: "Espace détente avec télévision",
     caption: "Espace détente",
+    width: 1600,
+    height: 1200,
   },
   VUE_EXTERIEURE: {
     url: "/gite/vue-exterieure.webp",
-    alt: "Vue extérieure",
+    alt: "Façade de la maison du Gîte Là-Haut aux Fourgs",
     caption: "Vue extérieure",
+    width: 1202,
+    height: 1600,
   },
   ENTREE: {
     url: "/gite/entree.webp",
-    alt: "Entrée",
+    alt: "Entrée indépendante du gîte",
     caption: "Entrée",
+    width: 1200,
+    height: 1600,
   },
   LES_FOURGS_LES_RANGS: {
     url: "/les-fourgs-les-rangs.webp",
     alt: "Les Rangs à 1km du Gîte",
     caption: "Les Rangs à 1km du Gîte",
+    width: 1600,
+    height: 1200,
   },
   METABIEF_FONDUE: {
     url: "/metabief-fondue.webp",
     alt: "Fondue à Métabief",
+    width: 1600,
+    height: 1294,
   },
   METABIEF_VIEW: {
     url: "/metabief-view.webp",
     alt: "Vue sur les Alpes depuis Métabief",
     caption: "Les Alpes depuis Métabief",
+    width: 1600,
+    height: 1200,
   },
   ORNANS_ETE: {
     url: "/ornans.webp",
     alt: "Ornans en été",
     caption: "Ornans en été",
-  },
-  LES_RASSES: {
-    url: "/les-rasses.webp",
-    alt: "Les Rasses - Station de ski",
-    caption: "Les Rasses - Station de ski",
+    width: 1600,
+    height: 1200,
   },
 };
 
@@ -167,43 +197,49 @@ export const LINKS = {
   },
   GITE_LA_HAUT: {
     reviewUrl: "https://maps.app.goo.gl/qMUVEo7cDwtYHdhZ8",
+    maps: "https://maps.app.goo.gl/tVdBEsWJFt4T7SuPA",
   },
 } as const;
 
 export const SEO_META = {
   INDEX: {
-    title: "Gîte La-Haut | Les Fourgs, Doubs - Hébergement jusqu'à 6 personnes",
+    title: "Gîte Là-Haut | Location 6 personnes aux Fourgs, près de Métabief",
     description:
-      "Découvrez le Gîte La-Haut aux Fourgs, un hébergement convivial pour 6 personnes au cœur des montagnes du Jura dans le Doubs. Idéal pour les vacances en famille, la randonnée en été, le ski de fond et alpin en hiver.",
+      "Gîte 2 étoiles pour 6 personnes aux Fourgs (Doubs), à 10 min de Métabief. Ski de fond depuis le jardin, randonnée en été. Réservation directe sans frais.",
   },
   ERROR: {
-    title: "Page non trouvée | Gîte La-Haut aux Fourgs",
+    title: "Page non trouvée | Gîte Là-Haut aux Fourgs",
     description:
       "La page que vous cherchez n'existe pas. Retournez à l'accueil pour découvrir notre gîte dans le Doubs.",
   },
   DECOUVRIR: {
-    title: "Activités été et hiver | Gîte La-Haut aux Fourgs, Doubs",
+    title: "Activités aux Fourgs et à Métabief | Gîte Là-Haut, Doubs",
     description:
-      "Découvrez les activités variées autour du Gîte La-Haut aux Fourgs : randonnée, ski de fond, ski alpin, raquettes, escalade et lacs en été. Un paradis pour les sportifs en toute saison dans le Doubs.",
+      "Ski alpin et de fond, raquettes, VTT, lac Saint-Point, château de Joux : que faire autour du Gîte Là-Haut aux Fourgs, été comme hiver.",
   },
   CONDITION_GENERALE_LOCATION: {
-    title: "Conditions Générales de Location | Gîte La-Haut aux Fourgs",
+    title: "Conditions générales de location | Gîte Là-Haut aux Fourgs",
     description:
-      "Consultez les conditions générales de location du Gîte La-Haut, hébergement pour 6 personnes aux Fourgs, dans le Doubs.",
+      "Consultez les conditions générales de location du Gîte Là-Haut, hébergement pour 6 personnes aux Fourgs, dans le Doubs.",
   },
   DISPONIBILITES_TARIFS: {
-    title: "Réserver/Disponibilités | Gîte La-Haut aux Fourgs, Doubs",
+    title: "Réserver/Disponibilités | Gîte Là-Haut aux Fourgs, Doubs",
     description:
-      "Réservez votre séjour au Gîte La-Haut aux Fourgs. Consultez nos disponibilités et tarifs pour un hébergement de 6 personnes dans le Doubs.",
+      "Tarifs et disponibilités du Gîte Là-Haut aux Fourgs (6 personnes). Semaine dès 450 €, week-end dès 350 €. Réservation directe par e-mail, sans frais.",
   },
   MENTIONS_LEGALES: {
-    title: "Mentions Légales | Gîte La-Haut aux Fourgs, Doubs",
+    title: "Mentions légales | Gîte Là-Haut aux Fourgs, Doubs",
     description:
-      "Informations légales concernant le Gîte La-Haut, hébergement de vacances pour 6 personnes aux Fourgs, dans le Doubs.",
+      "Informations légales concernant le Gîte Là-Haut, hébergement de vacances pour 6 personnes aux Fourgs, dans le Doubs.",
   },
   PLAN_DU_GITE: {
-    title: "Plan du Gîte | La-Haut aux Fourgs - Hébergement 6 personnes",
+    title: "Plan du Gîte Là-Haut | 2 chambres, 6 personnes aux Fourgs",
     description:
-      "Découvrez le plan détaillé du Gîte La-Haut, un hébergement convivial pour 6 personnes aux Fourgs, dans les montagnes du Jura (Doubs).",
+      "Plan du Gîte Là-Haut aux Fourgs : 2 chambres (1 lit double, 1 chambre de 4 lits), 1 salle de bain, au 2e étage avec entrée indépendante.",
+  },
+  AVIS: {
+    title: "Votre avis nous intéresse | Gîte Là-Haut",
+    description:
+      "Partagez votre expérience au Gîte Là-Haut. Votre avis nous aide à améliorer nos services.",
   },
 };

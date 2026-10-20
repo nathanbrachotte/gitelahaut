@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { ViewTransitions } from "astro:transitions";
 import { SEO } from "astro-seo";
 import { SimpleAnalytics } from "astro-simpleanalytics-plugin";
+import { getHomeSchema, getPageSchema } from "@/lib/schema";
+import { ROUTES } from "@/routes";
 
 interface Props {
   title: string;
@@ -14,6 +16,9 @@ interface Props {
   withPadding?: boolean;
   className?: string;
   ignoreViewTransitions?: boolean;
+  /** Page name used in the BreadcrumbList structured data */
+  breadcrumb?: string;
+  noindex?: boolean;
 }
 const {
   title,
@@ -21,17 +26,28 @@ const {
   withPadding = true,
   ignoreViewTransitions = false,
   className = {},
+  breadcrumb,
+  noindex = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL("/og.jpg", Astro.site).href;
+const isHome = Astro.url.pathname === "/";
+const bookingPath = ROUTES.DISPO_TARIFS.getPath({});
+const showBookingCta =
+  Astro.url.pathname.replace(/\/$/, "") !== bookingPath.replace(/\/$/, "");
+const schema = isHome
+  ? getHomeSchema()
+  : breadcrumb
+    ? getPageSchema({ name: breadcrumb, url: canonical })
+    : null;
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
-    <!-- Is this needed? -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -39,60 +55,53 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       title={title}
       description={description}
       canonical={canonical}
+      noindex={noindex}
       openGraph={{
         basic: {
           title,
           type: "website",
-          image: "/og.png",
+          image: ogImage,
           url: canonical,
+        },
+        optional: {
+          description,
+          locale: "fr_FR",
+          siteName: "Gîte Là-Haut",
+        },
+        image: {
+          width: 1600,
+          height: 630,
+          alt: "Gîte Là-Haut aux Fourgs",
         },
       }}
       twitter={{
+        card: "summary_large_image",
+        site: "@nathanbrachotte",
         creator: "@nathanbrachotte",
+        title,
+        description,
+        image: ogImage,
       }}
       extend={{
-        // extending the default link tags
-        link: [{ rel: "icon", href: "/favicon.ico" }],
-        // extending the default meta tags
         meta: [
-          {
-            name: "twitter:image",
-            content: "/og.webp",
-          },
-          {
-            name: "twitter:image",
-            content: "/og.png",
-          },
-          { name: "twitter:title", content: title },
-          { name: "twitter:description", content: description },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:site", content: "@nathanbrachotte" },
-          { property: "og:image:width", content: "1200" },
-          { property: "og:image:height", content: "630" },
           { name: "author", content: "Nathan Brachotte" },
         ],
       }}
-      extend={{
-        meta: [
-          { name: "robots", content: "index,follow" },
-          { name: "googlebot", content: "index,follow" },
-        ],
-      }}
     />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Gîte La-Haut",
-        url: canonical,
-      })}
-    />
+    {
+      schema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(schema)}
+        />
+      )
+    }
     {ignoreViewTransitions ? null : <ViewTransitions />}
   </head>
   <body
     class={cn(
       "min-h-screen flex flex-col justify-between items-stretch min-w-full",
+      { "pb-20 lg:pb-0": showBookingCta },
     )}
   >
     <Header />
@@ -107,6 +116,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       <slot />
     </div>
     <Footer />
+    {
+      showBookingCta && (
+        <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 border-t border-cyan-700 p-3 flex justify-center">
+          <a
+            href={bookingPath}
+            class="w-full max-w-md text-center rounded-md bg-primary text-primary-foreground font-semibold py-3 px-4 shadow"
+          >
+            Réserver / Voir les disponibilités
+          </a>
+        </div>
+      )
+    }
     <SimpleAnalytics collectDNT />
   </body>
 </html>

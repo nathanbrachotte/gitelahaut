@@ -7,8 +7,13 @@ export type Props = {
 };
 ---
 
-<div class="relative h-[400px] sm:h-[400px] flex justify-center">
-  <div class="max-w-full absolute" id="widget-fiche-ingenie-dispo"></div>
+<!-- Reserve the widget height up front so it does not shift the layout when injected -->
+<div
+  id="widget-fiche-ingenie-dispo-wrapper"
+  class="min-h-[460px] lg:min-h-[420px] max-h-[460px] lg:max-h-[420px] overflow-hidden w-full"
+  style="visibility: hidden"
+>
+  <div class="w-full" id="widget-fiche-ingenie-dispo"></div>
 </div>
 
 <script
@@ -40,4 +45,31 @@ export type Props = {
   });
 
   widget_dispo.init();
+
+  // The widget re-renders several times while loading. Keep it hidden until
+  // its final render (the "last updated" footer) so those re-renders don't
+  // count as layout shifts.
+  const widgetWrapper = document.getElementById(
+    "widget-fiche-ingenie-dispo-wrapper",
+  );
+  let revealTimeout;
+  const reveal = () => {
+    observer.disconnect();
+    widgetWrapper.classList.remove(
+      "max-h-[460px]",
+      "lg:max-h-[420px]",
+      "overflow-hidden",
+    );
+    widgetWrapper.classList.add("overflow-x-auto");
+    widgetWrapper.style.visibility = "visible";
+  };
+  const observer = new MutationObserver(() => {
+    if (widgetWrapper.querySelector(".dateMajPlanning") == null) {
+      return;
+    }
+    clearTimeout(revealTimeout);
+    revealTimeout = setTimeout(reveal, 150);
+  });
+  observer.observe(widgetWrapper, { childList: true, subtree: true });
+  setTimeout(reveal, 5000);
 </script>

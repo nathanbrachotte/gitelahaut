@@ -14,6 +14,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/components/Link";
 import { Label } from "@radix-ui/react-label";
 
+const withoutTrailingSlash = (path: string) =>
+  path.length > 1 ? path.replace(/\/$/, "") : path;
+
+const isActivePath = (activePath: string, link: string) =>
+  withoutTrailingSlash(activePath) === withoutTrailingSlash(link);
+
 export const CGLButton = () => {
   return (
     <Button asChild variant={"link"} aria-label="CGL">
@@ -23,8 +29,8 @@ export const CGLButton = () => {
 };
 export const MentionLegalesButton = () => {
   return (
-    <Button variant={"link"} aria-label="Mention Légales">
-      <a href={ROUTES.MENTIONS_LEGALES.getPath({})}>Mention Légales</a>
+    <Button variant={"link"} aria-label="Mentions légales">
+      <a href={ROUTES.MENTIONS_LEGALES.getPath({})}>Mentions légales</a>
     </Button>
   );
 };
@@ -242,7 +248,7 @@ export const MailLink = ({
 
 export const AccueilLink = ({ activePath }: { activePath: string }) => {
   const link = ROUTES.ACCUEIL.getPath({});
-  const isActive = activePath === link || activePath === "/";
+  const isActive = isActivePath(activePath, link);
 
   return (
     <Button
@@ -262,7 +268,7 @@ export const AccueilLink = ({ activePath }: { activePath: string }) => {
 
 export const DispoLink = ({ activePath }: { activePath: string }) => {
   const link = ROUTES.DISPO_TARIFS.getPath({});
-  const isActive = activePath === link;
+  const isActive = isActivePath(activePath, link);
 
   return (
     <Button
@@ -282,7 +288,7 @@ export const DispoLink = ({ activePath }: { activePath: string }) => {
 
 export const PlanLink = ({ activePath }: { activePath: string }) => {
   const link = ROUTES.PLAN_DU_GITE.getPath({});
-  const isActive = activePath === link;
+  const isActive = isActivePath(activePath, link);
 
   return (
     <Button
@@ -306,7 +312,7 @@ export const DecouvrirLaRegionLink = ({
   activePath: string;
 }) => {
   const link = ROUTES.ACTIVITES.getPath({});
-  const isActive = activePath === link;
+  const isActive = isActivePath(activePath, link);
 
   return (
     <Button

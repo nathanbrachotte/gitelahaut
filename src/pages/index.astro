@@ -18,6 +18,8 @@ import ContactForm from "@/components/ContactForm.astro";
 import Container from "@/components/Container.astro";
 import { NON_BREAKING_SPACE } from "@/constants";
 import { NAME } from "@/data.constants";
+import GiteFacts from "@/components/GiteFacts.astro";
+import { ROUTES } from "@/routes";
 ---
 
 <Layout
@@ -25,12 +27,18 @@ import { NAME } from "@/data.constants";
   description={SEO_META.INDEX.description}
   withPadding={false}
 >
-  <section id="hero" class="relative w-full h-[36rem] sm:h-[46rem]">
-    <Image
+  <section id="hero" class="relative w-full h-[42rem] sm:h-[46rem]">
+    <img
+      id="hero-image"
       src={IMAGES.LIVING_ROOM.url}
-      alt={IMAGES.LIVING_ROOM.caption}
-      width={911}
-      height={684}
+      srcset={`/gite/living-room-800.webp 800w, ${IMAGES.LIVING_ROOM.url} ${IMAGES.LIVING_ROOM.width}w`}
+      sizes="100vw"
+      alt={IMAGES.LIVING_ROOM.alt}
+      width={IMAGES.LIVING_ROOM.width}
+      height={IMAGES.LIVING_ROOM.height}
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
       class="w-full h-full object-cover object-center"
     />
     <div
@@ -43,7 +51,7 @@ import { NAME } from "@/data.constants";
     >
       <LandingH1>Bienvenue au {NAME}</LandingH1>
       <Text className="mt-4 mb-2 font-bold">
-        Venez découvrir les charmes de la montagne dans notre gîte “La-Haut”
+        Venez découvrir les charmes de la montagne dans notre gîte “Là-Haut”
         d’inspiration vintage dans le Doubs situé à 1200m d'altitude, au cœur du
         village de Les{NON_BREAKING_SPACE}Fourgs.
       </Text>
@@ -52,12 +60,18 @@ import { NAME } from "@/data.constants";
         et familial peut accueillir jusqu'à 6 personnes.
       </Text>
       <div class="flex flex-col items-center gap-4 mt-6">
-        <LaRandonneeLink client:load />
+        <a
+          href={ROUTES.DISPO_TARIFS.getPath({})}
+          class="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base sm:text-lg leading-tight text-center py-3 px-6 sm:px-8 shadow"
+        >
+          Voir les disponibilités et réserver
+        </a>
         <div class="flex flex-row gap-4 justify-center">
           <PhoneNumberButton />
           <MailButton />
           <AddressButton />
         </div>
+        <LaRandonneeLink client:load />
       </div>
     </div>
   </section>
@@ -79,9 +93,9 @@ import { NAME } from "@/data.constants";
       <div class="flex-1 w-full lg:w-1/2">
         <Image
           src={IMAGES.VUE_EXTERIEURE.url}
-          alt={IMAGES.VUE_EXTERIEURE.caption}
-          width={2464}
-          height={3280}
+          alt={IMAGES.VUE_EXTERIEURE.alt}
+          width={IMAGES.VUE_EXTERIEURE.width}
+          height={IMAGES.VUE_EXTERIEURE.height}
           class="sm:rounded-lg aspect-square object-cover"
         />
       </div>
@@ -153,10 +167,10 @@ import { NAME } from "@/data.constants";
       <div class="flex-1 w-full block lg:hidden">
         <Image
           src={IMAGES.ORNANS_ETE.url}
-          alt={IMAGES.ORNANS_ETE.caption}
+          alt={IMAGES.ORNANS_ETE.alt}
           class="sm:rounded-lg"
-          width={911}
-          height={684}
+          width={IMAGES.ORNANS_ETE.width}
+          height={IMAGES.ORNANS_ETE.height}
         />
       </div>
       <div class="flex-1 p-8 w-full lg:w-1/2">
@@ -218,14 +232,15 @@ import { NAME } from "@/data.constants";
       <div class="flex-1 w-full lg:w-1/2 hidden lg:block">
         <Image
           src={IMAGES.ORNANS_ETE.url}
-          alt={IMAGES.ORNANS_ETE.caption}
+          alt={IMAGES.ORNANS_ETE.alt}
           class="sm:rounded-lg"
-          width={911}
-          height={684}
+          width={IMAGES.ORNANS_ETE.width}
+          height={IMAGES.ORNANS_ETE.height}
         />
       </div>
     </div>
   </section>
+  <GiteFacts />
   <Gallery client:visible />
   <Container>
     <ContactForm />

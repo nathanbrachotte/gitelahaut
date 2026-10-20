@@ -3,7 +3,7 @@ import Card from "@/components/Card.astro";
 import {
   H2,
   H3,
-  LandingH2,
+  LandingH1,
   // , Text
 } from "@/components/Typography";
 import Layout from "@/layouts/Layout.astro";
@@ -24,10 +24,13 @@ import { PinkFlower } from "@/components/icons";
   title={SEO_META.DISPONIBILITES_TARIFS.title}
   description={SEO_META.DISPONIBILITES_TARIFS.description}
   ignoreViewTransitions
+  breadcrumb="Réserver/Disponibilités"
   className="flex flex-col gap-12"
 >
   <Container>
-    <LandingH2 className="text-center">Réserver/Disponibilités</LandingH2>
+    <LandingH1 className="text-center text-4xl lg:text-5xl">
+      Réserver/Disponibilités
+    </LandingH1>
     <Card className="mt-3">
       <H2>Disponibilités</H2>
       <CalendarDirect />

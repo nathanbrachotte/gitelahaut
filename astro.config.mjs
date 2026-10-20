@@ -10,7 +10,10 @@ export default defineConfig({
   site: "https://gitelahaut.com",
   output: "hybrid",
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes("/avis/"),
+      lastmod: new Date(),
+    }),
     react(),
     tailwind({
       applyBaseStyles: false,
