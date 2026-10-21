@@ -11,7 +11,8 @@ export default defineConfig({
   output: "hybrid",
   integrations: [
     sitemap({
-      filter: (page) => !page.includes("/avis/"),
+      filter: (page) =>
+        !["/avis/", "/404/"].some((path) => page.endsWith(path)),
       lastmod: new Date(),
     }),
     react(),

@@ -156,6 +156,40 @@ export const GITE_FACTS: {
   },
 ];
 
+/** Room-by-room description shown on /plan-du-gite/ (from public/gite/plan.webp) */
+export const ROOM_DETAILS = {
+  intro:
+    "Le Gîte Là-Haut accueille jusqu'à 6 personnes au 2e étage de notre maison, avec une entrée indépendante.",
+  sections: [
+    {
+      title: "Chambres et couchages",
+      items: [
+        { name: "Chambre de 4", detail: "2 lits superposés" },
+        { name: "Chambre de 2", detail: "1 lit double" },
+        { name: "Salon", detail: "1 canapé-lit" },
+      ],
+    },
+    {
+      title: "Pièces de vie",
+      items: [
+        {
+          name: "Cuisine équipée",
+          detail: "plaques de cuisson, évier et réfrigérateur",
+        },
+        { name: "Salle à manger", detail: "table pour 6 personnes" },
+        { name: "Salon", detail: "coin canapé et télévision" },
+      ],
+    },
+    {
+      title: "Salle d'eau",
+      items: [
+        { name: "Salle d'eau", detail: "douche et lavabo" },
+        { name: "WC séparé" },
+      ],
+    },
+  ],
+};
+
 export const FAQ = [
   {
     question: "Combien de personnes peut accueillir le gîte ?",
