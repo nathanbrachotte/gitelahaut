@@ -79,6 +79,11 @@ const vacationRental = {
     { "@type": "LocationFeatureSpecification", name: "Jardin", value: true },
     {
       "@type": "LocationFeatureSpecification",
+      name: "Parking (2 voitures)",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
       name: "Télévision",
       value: true,
     },

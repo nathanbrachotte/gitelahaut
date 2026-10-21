@@ -124,6 +124,7 @@ export const GITE_FACTS: {
     icon: "sparkles",
     value: "Wifi, draps et serviettes de toilette",
   },
+  { label: "Parking", icon: "car", value: "Parking pour 2 voitures" },
   {
     label: "Règles",
     icon: "noSmoking",
@@ -225,6 +226,11 @@ export const FAQ = [
     answer:
       "Par e-mail, sans frais ajoutés, avec le formulaire de la page Réserver. Nous vous répondons dans les plus brefs délais.",
     link: { href: "/disponibilites/", label: "Réserver par e-mail" },
+  },
+  {
+    question: "Y a-t-il le wifi et un parking ?",
+    answer:
+      "Oui, le wifi est inclus et le gîte dispose d'un parking pour 2 voitures.",
   },
   {
     question: "Peut-on skier depuis le gîte ?",
