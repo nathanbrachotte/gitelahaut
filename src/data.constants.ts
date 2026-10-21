@@ -106,7 +106,8 @@ export const GITE_FACTS: {
   {
     label: "Chambres",
     icon: "bed",
-    value: "2 chambres : 1 lit double, 1 chambre avec 4 lits",
+    value:
+      "2 chambres : 1 lit double, 1 chambre avec 2x2 lits superposés. Possibilité d'ajouter 2 lits dans le salon",
   },
   { label: "Salle de bain", icon: "bath", value: "1 salle de bain" },
   {
@@ -182,9 +183,9 @@ export const ROOM_DETAILS = {
     {
       title: "Chambres et couchages",
       items: [
-        { name: "Chambre de 4", detail: "2 lits superposés" },
+        { name: "Chambre de 4", detail: "2x2 lits superposés" },
         { name: "Chambre de 2", detail: "1 lit double" },
-        { name: "Salon", detail: "1 canapé-lit" },
+        { name: "Salon", detail: "possibilité d'ajouter 2 lits" },
       ],
     },
     {
@@ -212,7 +213,7 @@ export const FAQ = [
   {
     question: "Combien de personnes peut accueillir le gîte ?",
     answer:
-      "Jusqu'à 6 personnes, dans 2 chambres : une chambre avec un lit double et une chambre avec 4 lits. Le gîte a une salle de bain.",
+      "Jusqu'à 6 personnes, dans 2 chambres : une chambre avec un lit double et une chambre avec 2x2 lits superposés. Il est possible d'ajouter 2 lits dans le salon. Le gîte a une salle de bain.",
   },
   {
     question: "Comment accède-t-on au gîte ?",
@@ -320,8 +321,8 @@ export const IMAGES = {
   },
   ROOM_4_BEDS: {
     url: "/gite/room-4-beds.webp",
-    alt: "Chambre avec 4 lits",
-    caption: "Chambre avec 4 lits",
+    alt: "Chambre avec 2x2 lits superposés",
+    caption: "Chambre avec lits superposés",
     width: 1600,
     height: 1200,
   },
@@ -496,7 +497,7 @@ export const SEO_META = {
   PLAN_DU_GITE: {
     title: "Plan du Gîte Là-Haut | 2 chambres, 6 personnes aux Fourgs",
     description:
-      "Plan du Gîte Là-Haut aux Fourgs : 2 chambres (1 lit double, 1 chambre de 4 lits), 1 salle de bain, au 2e étage avec entrée indépendante.",
+      "Plan du Gîte Là-Haut aux Fourgs : 2 chambres (1 lit double, 2x2 lits superposés), 1 salle de bain, au 2e étage avec entrée indépendante.",
   },
   AVIS: {
     title: "Votre avis nous intéresse | Gîte Là-Haut",

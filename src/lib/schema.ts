@@ -99,7 +99,11 @@ const vacationRental = {
     floorLevel: "2",
     bed: [
       { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "Lit double" },
-      { "@type": "BedDetails", numberOfBeds: 4, typeOfBed: "Lit" },
+      {
+        "@type": "BedDetails",
+        numberOfBeds: 4,
+        typeOfBed: "Lit superposé (2x2)",
+      },
     ],
   },
 };
