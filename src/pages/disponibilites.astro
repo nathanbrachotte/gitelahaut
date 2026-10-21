@@ -2,20 +2,18 @@
 import Card from "@/components/Card.astro";
 import {
   H2,
-  H3,
   LandingH1,
-  // , Text
+  // H3, Text
 } from "@/components/Typography";
 import Layout from "@/layouts/Layout.astro";
 import CalendarDirect from "@/components/CalendarDirect.astro";
-import ContactFormLarge from "@/components/ContactFormLarge.astro";
+import EmailBooking from "@/components/EmailBooking.astro";
 import PricesSection from "@/components/PricesSection.astro";
 import {
   SEO_META,
   // LINKS
 } from "@/data.constants";
 import Container from "@/components/Container.astro";
-import { PinkFlower } from "@/components/icons";
 // import { Button } from "@/components/ui/button";
 // import { Link } from "@/components/Link";
 ---
@@ -45,11 +43,7 @@ import { PinkFlower } from "@/components/icons";
         </Link>
       </div> -->
 
-      <H3 className="flex items-center justify-start gap-2 mb-2">
-        Par e-mail (sans frais ajoutés)
-        <PinkFlower className="h-7 w-7" />
-      </H3>
-      <ContactFormLarge />
+      <EmailBooking />
     </Card>
     <Card className="mt-3">
       <PricesSection />
