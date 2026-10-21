@@ -250,7 +250,7 @@ export const FAQ = [
   {
     question: "Nous sommes plus de 6, avez-vous une autre solution ?",
     answer:
-      "Le Gîte La Randonnée, à la même adresse, accueille jusqu'à 14 personnes. Contactez-nous pour réserver les deux.",
+      "Le Gîte La Randonnée, à la même adresse, accueille jusqu'à 13 personnes. Contactez-nous pour réserver les deux.",
     link: {
       href: "https://gitelarandonnee.fr/",
       label: "Découvrir le Gîte La Randonnée",
