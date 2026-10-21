@@ -15,7 +15,7 @@ export function GiteLogoWrapper() {
       </Link>
       <div className="flex flex-col items-start">
         <Link href={homePagePath} target="_self" className="no-underline">
-          <p className="scroll-m-20 pb-2 text-2xl lg:text-3xl font-semibold tracking-tight text-cyan-700 whitespace-nowrap font-logo -mb-3">
+          <p className="scroll-m-20 pb-2 text-2xl xl:text-3xl font-semibold tracking-tight text-cyan-700 whitespace-nowrap font-logo -mb-3">
             {NAME}
           </p>
         </Link>
