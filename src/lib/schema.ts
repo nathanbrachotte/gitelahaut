@@ -28,6 +28,7 @@ const vacationRental = {
   "@type": "VacationRental",
   "@id": RENTAL_ID,
   identifier: "gite-la-haut",
+  additionalType: "Gite",
   name: NAME,
   description:
     "Meublé de tourisme 2 étoiles d'inspiration vintage pour 6 personnes, au 2e étage d'une maison avec entrée indépendante, à 1200 m d'altitude aux Fourgs (Doubs), près de Métabief et de la frontière suisse.",
@@ -40,6 +41,11 @@ const vacationRental = {
     IMAGES.KITCHEN.url,
     IMAGES.BEDROOM_DOUBLE_BED.url,
     IMAGES.ROOM_4_BEDS.url,
+    IMAGES.LIVING_ROOM_2.url,
+    IMAGES.TV_AREA.url,
+    IMAGES.ENTREE.url,
+    IMAGES.EXTERIEUR_NEIGE_GRAND.url,
+    IMAGES.EXTERIEUR_SKI_DE_FOND.url,
   ].map(absolute),
   address: {
     "@type": "PostalAddress",
