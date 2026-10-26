@@ -25,8 +25,9 @@ const website = {
 };
 
 const vacationRental = {
-  "@type": ["VacationRental", "LodgingBusiness"],
+  "@type": "VacationRental",
   "@id": RENTAL_ID,
+  identifier: "gite-la-haut",
   name: NAME,
   description:
     "Meublé de tourisme 2 étoiles d'inspiration vintage pour 6 personnes, au 2e étage d'une maison avec entrée indépendante, à 1200 m d'altitude aux Fourgs (Doubs), près de Métabief et de la frontière suisse.",
@@ -54,46 +55,46 @@ const vacationRental = {
     longitude: GEO.longitude,
   },
   hasMap: LINKS.GITE_LA_HAUT.maps,
-  checkinTime: "16:00",
-  checkoutTime: "10:00",
+  checkinTime: "16:00:00",
+  checkoutTime: "10:00:00",
   petsAllowed: false,
   smokingAllowed: false,
   starRating: { "@type": "Rating", ratingValue: 2 },
   priceRange: `${PRICES.WEEKEND_FROM} € - ${PRICES.WEEK_TO} €`,
-  amenityFeature: [
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Wifi gratuit",
-      value: true,
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Draps et serviettes fournis",
-      value: true,
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Cuisine équipée",
-      value: true,
-    },
-    { "@type": "LocationFeatureSpecification", name: "Jardin", value: true },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Parking (2 voitures)",
-      value: true,
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Télévision",
-      value: true,
-    },
-  ],
   sameAs: [LINKS.OFFICE_TOURISME_GITE.url],
   containsPlace: {
     "@type": "Accommodation",
-    additionalType: "https://schema.org/Apartment",
+    additionalType: "EntirePlace",
     name: `${NAME} - logement entier`,
-    occupancy: { "@type": "QuantitativeValue", maxValue: MAX_PERSONS },
+    occupancy: { "@type": "QuantitativeValue", value: MAX_PERSONS },
+    amenityFeature: [
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Wifi gratuit",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Draps et serviettes fournis",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Cuisine équipée",
+        value: true,
+      },
+      { "@type": "LocationFeatureSpecification", name: "Jardin", value: true },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Parking (2 voitures)",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Télévision",
+        value: true,
+      },
+    ],
     numberOfBedrooms: 2,
     numberOfBathroomsTotal: 1,
     floorLevel: "2",

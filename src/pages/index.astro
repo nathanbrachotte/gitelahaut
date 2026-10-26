@@ -10,7 +10,7 @@ import {
 } from "@/components/Buttons";
 import { Gallery } from "@/components/Gallery";
 import { Diamond } from "@/components/icons";
-import { IMAGES, SEO_META } from "@/data.constants";
+import { IMAGES, PRICES, SEO_META } from "@/data.constants";
 import { cn } from "@/lib/utils";
 import { Link } from "@/components/Link";
 import { LINKS } from "@/data.constants";
@@ -51,7 +51,7 @@ import { CalendarCheck } from "lucide-react";
         "rounded-lg",
       )}
     >
-      <LandingH1>Bienvenue au {NAME}</LandingH1>
+      <LandingH1>{NAME} aux Fourgs</LandingH1>
       <Text className="mt-4 mb-2 font-bold">
         Venez découvrir les charmes de la montagne dans notre gîte “Là-Haut”
         d’inspiration vintage dans le Doubs situé à 1200m d'altitude, au cœur du
@@ -60,6 +60,9 @@ import { CalendarCheck } from "lucide-react";
       <Text>
         Idéal pour les vacances en famille ou entre amis, notre gîte convivial
         et familial peut accueillir jusqu'à 6 personnes.
+      </Text>
+      <Text className="mt-2 font-semibold">
+        Week-end dès {PRICES.WEEKEND_FROM} €, semaine dès {PRICES.WEEK_FROM} €
       </Text>
       <div class="flex flex-col items-center gap-4 mt-6">
         <a

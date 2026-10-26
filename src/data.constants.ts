@@ -485,7 +485,7 @@ export const SEO_META = {
       "Consultez les conditions générales de location du Gîte Là-Haut, hébergement pour 6 personnes aux Fourgs, dans le Doubs.",
   },
   DISPONIBILITES_TARIFS: {
-    title: "Réserver/Disponibilités | Gîte Là-Haut aux Fourgs, Doubs",
+    title: "Tarifs et disponibilités | Gîte Là-Haut aux Fourgs, Doubs",
     description:
       "Tarifs et disponibilités du Gîte Là-Haut aux Fourgs (6 personnes). Semaine dès 450 €, week-end dès 350 €. Réservation directe par e-mail, sans frais.",
   },
